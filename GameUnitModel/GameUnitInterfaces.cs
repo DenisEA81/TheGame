@@ -15,7 +15,7 @@ namespace GameUnitModel
         /// <summary>
         /// Координаты объекта на плоскости
         /// </summary>
-        Point Location { get; set; }  
+        Point Location { get; set; }
     }
 
     /// <summary>
@@ -87,8 +87,11 @@ namespace GameUnitModel
     public interface IAttack
     {
         IDamage Damage { get; set; }
-        void Attack((ILocateble,ISizeble) target);
+        void Attack((ILocateble, ISizeble) target);
     }
 
-    
+    public interface IDrawing
+    {
+        void Draw();
+    }
 }

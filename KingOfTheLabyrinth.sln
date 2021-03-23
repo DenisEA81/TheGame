@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KingOfTheLabyrinth", "KingOfTheLabyrinth\KingOfTheLabyrinth.csproj", "{3B2A433B-AF84-4A1E-AF95-63FFD48C8BC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUnitModel", "GameUnitModel\GameUnitModel.csproj", "{971E46A7-D8A0-4D09-B593-9980902B115D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameUnitModel", "GameUnitModel\GameUnitModel.csproj", "{971E46A7-D8A0-4D09-B593-9980902B115D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderSurfaces", "Renders\RenderSurfaces.csproj", "{54C6D485-B90B-4F43-BC10-043EDCE04C95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surfaces", "Renders\Surfaces.csproj", "{54C6D485-B90B-4F43-BC10-043EDCE04C95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using RenderSurfaces;
+using Surfaces;
 using GameUnitModel;
 
 namespace KingLab
@@ -45,4 +45,6 @@ namespace KingLab
             TeamColor = color;
         }
     }
+
+    public class GameBuildingWFSurface
 }

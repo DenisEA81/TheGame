@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System;
 
-namespace RenderSurfaces
+namespace Surfaces
 {
     public interface IDrawingSurface
     {
@@ -27,6 +27,7 @@ namespace RenderSurfaces
         void DrawString(string text, Font font, Brush brush, float x, float y, int bufferIndex);
 
         void DrawRectangle(Pen pen, Rectangle rectangle, int bufferIndex);
+        void DrawImage(int bufferIndex, Image image, int X, int Y, Rectangle rectangle);
 
         void MergeBuffers();
 

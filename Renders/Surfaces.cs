@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 
-namespace RenderSurfaces
+namespace Surfaces
 {
         /// <summary>
         /// Windows Forms Drawing Surface
