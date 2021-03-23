@@ -10,6 +10,9 @@ namespace Surfaces
         /// </summary>
         public class WFDrawingSurface : IDrawingSurface
         {
+            public delegate void DelegateFrameSizing(int bufferIndex, PointF[] points);
+            protected DelegateFrameSizing ResizeActiveFrame = null;
+            
             public int BufferCount { get; private set; }
             public Bitmap[] buffDrawMain { get; private set; } = null;
             public Graphics[] graphDrawMain { get; private set; } = null;
@@ -20,11 +23,12 @@ namespace Surfaces
 
             private readonly PictureBox Picture = null;
             public Point[][] BufferFrame { get; protected set; }
-            public WFDrawingSurface(PictureBox picture, int bufferCount = 1)
+            public WFDrawingSurface(PictureBox picture, int bufferCount = 1, bool activeFrameResizing = true)
             {
                 Picture = picture ?? throw new Exception("Передан null-PictureBox");
                 BufferCount = bufferCount;
                 BufferFrame = new Point[bufferCount][];
+                if (activeFrameResizing) ResizeActiveFrame = ActiveFrameResize;
                 for (int i = 0; i < bufferCount; i++)
                     BufferFrame[i] = new Point[] { new Point(picture.Width, picture.Height), new Point(0, 0) };
                 ResetSurfaces();
@@ -57,6 +61,7 @@ namespace Surfaces
 
             public void ClearSurfaces(Color color)
             {
+                ResetSurfaces();
                 Parallel.For(0, BufferCount, (int i) =>
                 {
                     graphDrawMain[i].Clear(i == 0 ? color : Color.Transparent);
@@ -67,7 +72,7 @@ namespace Surfaces
                 });
             }
 
-            protected void ResizeActiveFrame(int bufferIndex, PointF[] points)
+            protected void ActiveFrameResize(int bufferIndex, PointF[] points)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
                 for (int i = 0; i < points.Length; i++)
@@ -82,59 +87,59 @@ namespace Surfaces
             public void DrawRectangle(Pen pen, Rectangle rectangle, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, new PointF[] { new PointF(rectangle.Left, rectangle.Top), new PointF(rectangle.Right, rectangle.Bottom) });
-                graphDrawMain[bufferIndex].DrawRectangle(pen, rectangle);
+                ResizeActiveFrame?.Invoke(bufferIndex, new PointF[] { new PointF(rectangle.Left, rectangle.Top), new PointF(rectangle.Right, rectangle.Bottom) });
+                graphDrawMain?[bufferIndex].DrawRectangle(pen, rectangle);
             }
 
             public void DrawString(string text, Font font, Brush brush, float x, float y, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                graphDrawMain[bufferIndex].DrawString(text, font, brush, x, y);
+                graphDrawMain?[bufferIndex].DrawString(text, font, brush, x, y);
             }
             public void DrawPolygon(Pen pen, PointF[] points, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, points);
-                graphDrawMain[bufferIndex].DrawPolygon(pen, points);
+                ResizeActiveFrame?.Invoke(bufferIndex, points);
+                graphDrawMain?[bufferIndex].DrawPolygon(pen, points);
             }
 
             public void FillPolygon(Brush brush, PointF[] points, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, points);
-                graphDrawMain[bufferIndex].FillPolygon(brush, points);
+                ResizeActiveFrame?.Invoke(bufferIndex, points);
+                graphDrawMain?[bufferIndex].FillPolygon(brush, points);
             }
 
             public void DrawLine(Pen pen, PointF point0, PointF point1, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, new PointF[] { point0, point1 });
-                graphDrawMain[bufferIndex].DrawLine(pen, point0, point1);
+                ResizeActiveFrame?.Invoke(bufferIndex, new PointF[] { point0, point1 });
+                graphDrawMain?[bufferIndex].DrawLine(pen, point0, point1);
             }
 
             public void DrawLines(Pen pen, PointF[] points, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, points);
-                graphDrawMain[bufferIndex].DrawLines(pen, points);
+                ResizeActiveFrame?.Invoke(bufferIndex, points);
+                graphDrawMain?[bufferIndex].DrawLines(pen, points);
             }
 
             public void FillEllipse(Brush brush, float X, float Y, float SizeX, float SizeY, int bufferIndex)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex, new PointF[] { new PointF(X, Y), new PointF(X + SizeX, Y + SizeY) });
-                graphDrawMain[bufferIndex].FillEllipse(brush, X, Y, SizeX, SizeY);
+                ResizeActiveFrame?.Invoke(bufferIndex, new PointF[] { new PointF(X, Y), new PointF(X + SizeX, Y + SizeY) });
+                graphDrawMain?[bufferIndex].FillEllipse(brush, X, Y, SizeX, SizeY);
             }
 
             public void DrawImage(int bufferIndex, Image image, int X, int Y, Rectangle rectangle)
             {
                 if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
-                ResizeActiveFrame(bufferIndex,
+                ResizeActiveFrame?.Invoke(bufferIndex,
                                     new PointF[] {
                                     rectangle.Location,
                                     new PointF(rectangle.X+rectangle.Width,
                                     rectangle.Y+rectangle.Height) });
-                graphDrawMain[bufferIndex].DrawImage(image, X, Y, rectangle, GraphicsUnit.Pixel);
+                graphDrawMain?[bufferIndex].DrawImage(image, X, Y, rectangle, GraphicsUnit.Pixel);
             }
 
             public void MergeBuffers()

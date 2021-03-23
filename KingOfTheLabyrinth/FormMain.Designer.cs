@@ -29,9 +29,11 @@ namespace KingLab
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.PanelScreen = new System.Windows.Forms.Panel();
             this.PictureScreen = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PanelScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureScreen)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +57,10 @@ namespace KingLab
             this.PictureScreen.Size = new System.Drawing.Size(780, 559);
             this.PictureScreen.TabIndex = 0;
             this.PictureScreen.TabStop = false;
-            this.PictureScreen.Click += new System.EventHandler(this.PictureScreen_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMain
             // 
@@ -69,7 +74,6 @@ namespace KingLab
             this.Text = "Король лабиринтов";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyUp);
             this.PanelScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureScreen)).EndInit();
             this.ResumeLayout(false);
@@ -80,6 +84,7 @@ namespace KingLab
 
         private System.Windows.Forms.Panel PanelScreen;
         private System.Windows.Forms.PictureBox PictureScreen;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
