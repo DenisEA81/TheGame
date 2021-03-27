@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using Surfaces;
-using GameUnitModel;
-using System.Windows;
-using System.Windows.Forms;
 using Rendering;
+using ApplicationController;
 
-namespace KingLab
+namespace TestApplication
 {
-    public class LabyrintGameController : IApplicationController
+    public class TestGameController : IApplicationController
     {
         public int TeamCount = 6;
         public int TeamSize = 3;
@@ -27,14 +25,10 @@ namespace KingLab
 
         public IRender Render { get; } 
 
-        public LabyrintGameController(IDrawingSurface surface)
+        public TestGameController(IDrawingSurface surface)
         {
             Surface = surface;
-
-
-            Render = new ImageRender(Surface);
-
-
+                        
             Teams = new List<GameTeam>();
             Color[] tmp = new Color[]
                         {
@@ -50,6 +44,8 @@ namespace KingLab
                 int k = i % 5;
                 Teams.Add(new GameTeam($"Команда №{i}", tmp[k]));
             }
+
+            Render = new GameTeamRender(Surface,Teams,BackgroundColor);
         }
 
         public void Start()
@@ -102,23 +98,7 @@ namespace KingLab
 
         public void RedrawScene()
         {
-            Surface.ClearSurfaces(BackgroundColor);
-            for (int i = 0; i < Teams.Count; i++)
-            {
-                #region Building Rendering
-                for (int j = 0; j < Teams[i].Buildings.Count; j++)
-                {
-                    if (Teams[i].Buildings[j] == null) continue;
-
-                    Surface.FillEllipse(
-                        new SolidBrush(Teams[i].TeamColor),
-                        Teams[i].Buildings[j].Location.X - Teams[i].Buildings[j].Size.X / 2,
-                        Teams[i].Buildings[j].Location.Y - Teams[i].Buildings[j].Size.Y / 2,
-                        Teams[i].Buildings[j].Size.X, Teams[i].Buildings[j].Size.Y, 0);
-                }
-                #endregion
-            }
-            Surface.Render();
+            Render.Rendering();
         }
 
         public void Stop()
@@ -126,4 +106,6 @@ namespace KingLab
             ApplicationState = ApplicationStateEnum.Stop;
         }
     }
+
+    
 }

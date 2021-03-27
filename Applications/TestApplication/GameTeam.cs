@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using GameUnitModel;
 
-namespace KingLab
+namespace TestApplication
 {
     public class GameTeam
     {

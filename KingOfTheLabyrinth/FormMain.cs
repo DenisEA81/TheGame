@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Surfaces;
-using Rendering;
+using ApplicationController;
+using TestApplication;
 
 namespace KingLab
 {
@@ -28,7 +28,7 @@ namespace KingLab
             try
             {
                 this.WindowState = FormWindowState.Maximized;
-                CurrentAppController = new LabyrintGameController(new WFDrawingSurface(PictureScreen, 1, false));
+                CurrentAppController = new TestGameController(new WFDrawingSurface(PictureScreen, 1, false));
                 CurrentAppController.Start();
                 timerAction.Enabled = true;
             }

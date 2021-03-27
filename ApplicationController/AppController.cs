@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Rendering;
 
 
-namespace KingLab
+namespace ApplicationController
 {
     public enum ApplicationStateEnum { Playing, Stop }
     public interface IApplicationController
