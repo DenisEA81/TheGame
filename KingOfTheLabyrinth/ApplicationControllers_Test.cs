@@ -30,7 +30,11 @@ namespace KingLab
         public LabyrintGameController(IDrawingSurface surface)
         {
             Surface = surface;
+
+
             Render = new ImageRender(Surface);
+
+
             Teams = new List<GameTeam>();
             Color[] tmp = new Color[]
                         {
