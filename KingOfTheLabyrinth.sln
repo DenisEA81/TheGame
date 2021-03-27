@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KingOfTheLabyrinth", "KingO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameUnitModel", "GameUnitModel\GameUnitModel.csproj", "{971E46A7-D8A0-4D09-B593-9980902B115D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surfaces", "Renders\Surfaces.csproj", "{54C6D485-B90B-4F43-BC10-043EDCE04C95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surfaces", "Surfaces\Surfaces.csproj", "{54C6D485-B90B-4F43-BC10-043EDCE04C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rendering", "Rendering\Rendering.csproj", "{B60307E4-AA5F-4176-A477-99CE1459C6F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rendering", "Rendering\Rendering.csproj", "{B60307E4-AA5F-4176-A477-99CE1459C6F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
