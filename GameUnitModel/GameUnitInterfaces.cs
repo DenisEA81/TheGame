@@ -7,6 +7,11 @@ using System.Drawing;
 
 namespace GameUnitModel
 {
+    public interface IUnique
+    {
+        int UniqueID { get; }
+    }
+
     /// <summary>
     /// Координаты
     /// </summary>
@@ -66,7 +71,7 @@ namespace GameUnitModel
         /// <summary>
         /// Максимально возможное значение здоровья
         /// </summary>
-        int MaxHealth { get; set; }
+        float MaxHealth { get; set; }
         /// <summary>
         /// Текущее состояние здоровья
         /// </summary>

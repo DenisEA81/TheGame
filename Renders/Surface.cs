@@ -13,8 +13,8 @@ namespace Surfaces
         void ResetSurfaces(bool forceReset = false);
 
         void DevalidationSurfaces();
-
-        void ClearSurfaces(Color color);
+        void ClearSurface(Color color, int BufferIndex);
+        void ClearSurfaces(Color color, bool flagTransparentBackgroundForSecondaryBuffers = true);
         void DrawPolygon(Pen pen, PointF[] points, int bufferIndex);
 
         void FillPolygon(Brush brush, PointF[] points, int bufferIndex);
@@ -23,7 +23,7 @@ namespace Surfaces
         void DrawLines(Pen pen, PointF[] points, int bufferIndex);
 
         void FillEllipse(Brush brush, float X, float Y, float SizeX, float SizeY, int bufferIndex);
-
+        void FillRectangle(Brush brush, float X, float Y, float SizeX, float SizeY, int bufferIndex);
         void DrawString(string text, Font font, Brush brush, float x, float y, int bufferIndex);
 
         void DrawRectangle(Pen pen, Rectangle rectangle, int bufferIndex);

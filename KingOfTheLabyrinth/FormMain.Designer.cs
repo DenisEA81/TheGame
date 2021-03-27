@@ -33,13 +33,14 @@ namespace KingLab
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.PanelScreen = new System.Windows.Forms.Panel();
             this.PictureScreen = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerAction = new System.Windows.Forms.Timer(this.components);
             this.PanelScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureScreen)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelScreen
             // 
+            this.PanelScreen.BackColor = System.Drawing.Color.Black;
             this.PanelScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelScreen.Controls.Add(this.PictureScreen);
             this.PanelScreen.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -58,9 +59,10 @@ namespace KingLab
             this.PictureScreen.TabIndex = 0;
             this.PictureScreen.TabStop = false;
             // 
-            // timer1
+            // timerAction
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerAction.Interval = 200;
+            this.timerAction.Tick += new System.EventHandler(this.timerAction_Tick);
             // 
             // FormMain
             // 
@@ -72,6 +74,7 @@ namespace KingLab
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Король лабиринтов";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
             this.PanelScreen.ResumeLayout(false);
@@ -84,7 +87,7 @@ namespace KingLab
 
         private System.Windows.Forms.Panel PanelScreen;
         private System.Windows.Forms.PictureBox PictureScreen;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerAction;
     }
 }
 

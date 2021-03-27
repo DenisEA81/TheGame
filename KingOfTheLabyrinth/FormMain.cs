@@ -5,16 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Surfaces;
+using Rendering;
 
 namespace KingLab
 {
     public partial class FormMain : Form
     {
-        
-        public AppController Model { get; set; }
+        public bool IsStopApplication = false;
+        public IApplicationController CurrentAppController { get; set; } = null;
 
         public FormMain()
         {
@@ -23,37 +25,67 @@ namespace KingLab
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            Model = new AppController(new SimpleGameRender(new WFDrawingSurface(PictureScreen, 1, false)));
-            Model.CreateGame();
-            timer1.Enabled = true;
-        }
-
-        
-
-        private void FormMain_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.HasFlag(Keys.Enter)& e.Alt)
+            try
             {
-                Model.Render.Surface.DevalidationSurfaces();
-                this.TopMost = !this.TopMost;
-                if (this.TopMost)
-                {
-                    this.FormBorderStyle = FormBorderStyle.None;
-                    this.WindowState = FormWindowState.Normal;
-                    this.WindowState = FormWindowState.Maximized;
-                }
-                else
-                {
-                    this.FormBorderStyle = FormBorderStyle.Sizable;
-                }
-                e.SuppressKeyPress = true;
+                this.WindowState = FormWindowState.Maximized;
+                CurrentAppController = new LabyrintGameController(new WFDrawingSurface(PictureScreen, 1, false));
+                CurrentAppController.Start();
+                timerAction.Enabled = true;
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show($"FormMain_Load->{er.Message}");
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
-            Model.RedrawScene();
+            try
+            {
+
+                if (e.KeyCode.HasFlag(Keys.Enter) & e.Alt)
+                {
+                    CurrentAppController.Render.Surface.DevalidationSurfaces();
+                    this.TopMost = !this.TopMost;
+                    if (this.TopMost)
+                    {
+                        this.FormBorderStyle = FormBorderStyle.None;
+                        this.WindowState = FormWindowState.Normal;
+                        this.WindowState = FormWindowState.Maximized;
+                        this.PanelScreen.BorderStyle = BorderStyle.None;
+                    }
+                    else
+                    {
+                        this.FormBorderStyle = FormBorderStyle.Sizable;
+                        this.PanelScreen.BorderStyle = BorderStyle.Fixed3D;
+                    }
+                    e.SuppressKeyPress = true;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show($"FormMain_KeyDown->{er.Message}");
+            }
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            IsStopApplication = true;
+        }
+
+        private void timerAction_Tick(object sender, EventArgs e)
+        {
+            timerAction.Enabled = false;
+            while (!IsStopApplication)
+            {
+                CurrentAppController.LogicStep();
+                CurrentAppController.RedrawScene();
+                IsStopApplication |= CurrentAppController.ApplicationState == ApplicationStateEnum.Stop; 
+                Thread.Sleep(1);
+                Application.DoEvents();
+            }
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.PanelScreen.BorderStyle = BorderStyle.Fixed3D;
         }
     }
 }

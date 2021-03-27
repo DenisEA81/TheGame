@@ -9,12 +9,13 @@ namespace GameUnitModel
 {
     public class GameBuilding:StaticGameUnit, IHealthed
     {
-        public GameBuilding(Point location, Point size, float maxHealth)
+        public GameBuilding(Point location, Point size, float maxHealth, int uniqueID)
         {
             Location = location;
             Size = size;
-            MaxHealth = MaxHealth;
+            MaxHealth = maxHealth;
             Health = MaxHealth;
+            UniqueID = uniqueID;
         }
 
     }

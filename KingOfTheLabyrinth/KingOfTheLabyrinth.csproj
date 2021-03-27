@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GameUnitModel\GameUnitModel.csproj" />
+    <ProjectReference Include="..\Rendering\Rendering.csproj" />
     <ProjectReference Include="..\Renders\Surfaces.csproj" />
   </ItemGroup>
 
