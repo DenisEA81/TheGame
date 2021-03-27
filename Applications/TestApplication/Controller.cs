@@ -46,17 +46,19 @@ namespace TestApplication
             }
 
             Render = new GameTeamRender(Surface,Teams,BackgroundColor);
+            
         }
 
         public void Start()
         {
             Random rnd = new Random(DateTime.Now.Millisecond);
+            Render.DrawingFrame = new Rectangle(250, 250, 500, 500);
             for (int i = 0; i < Teams.Count; i++)
             {
                 for (int j = 0; j < TeamSize; j++)
                 {
 
-                    Teams[i].Buildings.Add(new GameUnitModel.GameBuilding(new Point(300 + i * 200, 300 + j * 200), new Point(100, 100), rnd.Next(BuildingHealth), i * 1000000 + j));
+                    Teams[i].Buildings.Add(new GameUnitModel.GameBuilding(new Point(50+i * 200, 300 + j * 200), new Point(100, 100), rnd.Next(BuildingHealth), i * 1000000 + j));
                     Teams[i].Buildings[j].OnTotalDamage += OnBuildingCrash;
                 }
 

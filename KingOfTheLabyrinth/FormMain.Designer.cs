@@ -40,13 +40,13 @@ namespace KingLab
             // 
             // PanelScreen
             // 
-            this.PanelScreen.BackColor = System.Drawing.Color.Black;
+            this.PanelScreen.BackColor = System.Drawing.SystemColors.Control;
             this.PanelScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelScreen.Controls.Add(this.PictureScreen);
             this.PanelScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelScreen.Location = new System.Drawing.Point(0, 0);
             this.PanelScreen.Name = "PanelScreen";
-            this.PanelScreen.Size = new System.Drawing.Size(784, 563);
+            this.PanelScreen.Size = new System.Drawing.Size(504, 504);
             this.PanelScreen.TabIndex = 0;
             // 
             // PictureScreen
@@ -54,8 +54,9 @@ namespace KingLab
             this.PictureScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureScreen.ErrorImage = null;
             this.PictureScreen.Location = new System.Drawing.Point(0, 0);
+            this.PictureScreen.MinimumSize = new System.Drawing.Size(500, 500);
             this.PictureScreen.Name = "PictureScreen";
-            this.PictureScreen.Size = new System.Drawing.Size(780, 559);
+            this.PictureScreen.Size = new System.Drawing.Size(500, 500);
             this.PictureScreen.TabIndex = 0;
             this.PictureScreen.TabStop = false;
             // 
@@ -68,9 +69,10 @@ namespace KingLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 563);
+            this.ClientSize = new System.Drawing.Size(504, 504);
             this.Controls.Add(this.PanelScreen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(520, 543);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Король лабиринтов";

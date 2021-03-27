@@ -8,7 +8,7 @@ namespace Surfaces
         int Width { get; }
         int Height { get; }
         int BufferCount { get; }
-
+        Rectangle MainFrame { get; set; }
         Point[][] BufferFrame { get; }
         void ResetSurfaces(bool forceReset = false);
 

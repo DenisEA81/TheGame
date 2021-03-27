@@ -6,20 +6,21 @@ using System.Drawing;
 
 namespace TestApplication
 {
-    public class GameTeamRender : IRender
+    public class GameTeamRender : ARender
     {
-        public IDrawingSurface Surface { get; }
         public List<GameTeam> Teams { get; set; }
 
         protected Color BackGroundColor;
+
 
         public GameTeamRender(IDrawingSurface surface, List<GameTeam> teams, Color backgroundBrushColor)
         {
             Surface = surface;
             Teams = teams;
             BackGroundColor = backgroundBrushColor;
+            DrawingFrame = new Rectangle(0, 0, surface.Width, surface.Height);
         }
-        public void Rendering(int BufferIndex = 0)
+        public override void Rendering(int BufferIndex = 0)
         {
             Surface.ClearSurfaces(BackGroundColor);
             for (int i = 0; i < Teams.Count; i++)

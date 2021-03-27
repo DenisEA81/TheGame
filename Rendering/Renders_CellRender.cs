@@ -4,10 +4,8 @@ using Surfaces;
 
 namespace Rendering
 {
-    public class CellRender : IRender
+    public class CellRender : ARender
     {
-        public IDrawingSurface Surface { get; private set; }
-
         private int[][] Data;
         private Pen[] paintPen = null;
         private Brush[] paintBrush = null;
@@ -22,9 +20,10 @@ namespace Rendering
             paintBrush = brushes;
             cellRectPen = cellRectanglePen;
             backgroundCellColor = backgroundBrushColor;
+            DrawingFrame = new Rectangle(0, 0, surface.Width, surface.Height);
         }
 
-        public void Rendering(int bufferIndex=0)
+        public override void Rendering(int bufferIndex=0)
         {
             int dataXCount = Data.Length;
             int dataYCount = Data[0].Length;

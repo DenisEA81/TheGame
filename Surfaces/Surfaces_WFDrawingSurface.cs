@@ -25,6 +25,18 @@ namespace Surfaces
         public int Height { get { lock (Picture) return Picture?.Height ?? 0; } }
 
         private readonly PictureBox Picture = null;
+
+        private Rectangle _MainFrame;
+        public Rectangle MainFrame 
+        { 
+            get=>_MainFrame;
+            set 
+            {
+                _MainFrame = value;
+                if (graphDrawMain!=null)
+                    graphDrawMain[0].Clip = new Region(value);
+            } 
+        } 
         public Point[][] BufferFrame { get; protected set; }
         public WFDrawingSurface(PictureBox picture, int bufferCount = 1, bool activeFrameResizing = true)
         {
@@ -38,6 +50,7 @@ namespace Surfaces
             }
             for (int i = 0; i < bufferCount; i++)
                 BufferFrame[i] = new Point[] { new Point(picture.Width, picture.Height), new Point(0, 0) };
+            MainFrame = new Rectangle(0,0,picture.Width,picture.Height);
             ResetSurfaces();
         }
 
@@ -58,6 +71,8 @@ namespace Surfaces
                 if (forceReset || (buffDrawMain[i] == null)) buffDrawMain[i] = new Bitmap(Picture.ClientRectangle.Width, Picture.ClientRectangle.Height);
                 if (forceReset || (graphDrawMain[i] == null)) graphDrawMain[i] = Graphics.FromImage(buffDrawMain[i]);
             }
+            if (graphDrawMain != null)
+                graphDrawMain[0].Clip = new Region(MainFrame);
         }
 
         public void DevalidationSurfaces()
