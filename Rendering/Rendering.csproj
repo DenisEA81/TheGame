@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Renders\Surfaces.csproj" />
+    <ProjectReference Include="..\Surfaces\Surfaces.csproj" />
   </ItemGroup>
 
 </Project>
