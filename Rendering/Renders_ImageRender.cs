@@ -8,21 +8,14 @@ using System.Threading.Tasks;
 
 namespace Rendering
 {
-    public interface ISprite
+    public interface IPositionedBitmap
     {
-        Bitmap Picture { get; }
-        Point Position { get; }
+        Bitmap Item { get; }
+        Point Position { get; set; }
     }
-
-    public interface IZLevelCollection<T>
-    {
-        List<T> Items { get; }
-        int ZLevel { get; }
-    }
-
     public class ImageRender : ARender
     {
-        public IZLevelCollection<ISprite> SpriteCollection { get; set; } = null;
+        public List<IPositionedBitmap> ItemList { get; set; } = null;
 
         public ImageRender(IDrawingSurface surface)
         {
@@ -32,8 +25,11 @@ namespace Rendering
 
         public override void Rendering(int BufferIndex = 0)
         {
-            if (SpriteCollection == null) throw new NullReferenceException("SpriteCollection is null");
-            throw new NotImplementedException();
+            if (ItemList == null) throw new NullReferenceException("ItemList is null");
+            
+            for (int i=0;i< ItemList.Count;i++)
+                Surface.DrawImage(BufferIndex, ItemList[i].Item, ItemList[i].Position.X, ItemList[i].Position.Y);
+            Surface.Render();
         }
     }
 }

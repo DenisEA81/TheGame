@@ -188,6 +188,16 @@ namespace Surfaces
             graphDrawMain?[bufferIndex].DrawImage(image, X, Y, rectangle, GraphicsUnit.Pixel);
         }
 
+        public void DrawImage(int bufferIndex, Image image, int X, int Y)
+        {
+            if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
+            ResizeActiveFrame?.Invoke(bufferIndex, new PointF[] {
+                                    new PointF(X,Y),
+                                    new PointF( X+image.Width,
+                                                Y+image.Height) });
+            graphDrawMain?[bufferIndex].DrawImage(image, X, Y);
+        }
+
         public void DrawImage(int bufferIndex, Image image)
         {
             if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
@@ -249,6 +259,8 @@ namespace Surfaces
 
         public void Render(int bufferIndex = 0)
         {
+            if (buffDrawMain == null) 
+                return;
             if ((bufferIndex < 0) || (bufferIndex >= BufferCount)) throw new Exception("Индекс буфера вне массива");
             Picture.Image = buffDrawMain[bufferIndex];
         }

@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rendering\Rendering.csproj" />
+    <ProjectReference Include="..\ToolLibrary\ToolLibrary.csproj" />
   </ItemGroup>
 
 </Project>

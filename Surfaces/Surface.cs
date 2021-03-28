@@ -28,7 +28,7 @@ namespace Surfaces
 
         void DrawRectangle(Pen pen, Rectangle rectangle, int bufferIndex);
         void DrawImage(int bufferIndex, Image image, int X, int Y, Rectangle rectangle);
-
+        void DrawImage(int bufferIndex, Image image, int X, int Y);
         void MergeBuffers();
 
         void Render(int bufferIndex = 0);

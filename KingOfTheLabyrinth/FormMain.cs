@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Surfaces;
 using ApplicationController;
-using TestApplication;
+//using TestApplication;
+using KingLabApplication;
 
 namespace KingLab
 {
@@ -28,7 +23,8 @@ namespace KingLab
             try
             {
                 this.WindowState = FormWindowState.Maximized;
-                CurrentAppController = new TestGameController(new WFDrawingSurface(PictureScreen, 1, false));
+                CurrentAppController = new KingLabLevelController(new WFDrawingSurface(PictureScreen, 1, false),Application.StartupPath);
+                this.Cursor = CurrentAppController.GetAppCursor();
                 CurrentAppController.Start();
                 timerAction.Enabled = true;
             }

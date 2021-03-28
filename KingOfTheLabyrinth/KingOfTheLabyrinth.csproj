@@ -10,7 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Applications\TestApplication\TestApplication.csproj" />
+    <Compile Remove="ApplicationResources\**" />
+    <EmbeddedResource Remove="ApplicationResources\**" />
+    <None Remove="ApplicationResources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Applications\KingLabApplication\KingLabApplication.csproj" />
+    <ProjectReference Include="..\ToolLibrary\ToolLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
