@@ -20,6 +20,8 @@ namespace KingLabApplication
         protected List<IPositionedBitmap> Pictures { get; set; }
         protected List<IImageUnitTemplate> UnitTemplate { get; set; }
 
+        protected GameTimer gameTimer = new GameTimer(30);
+
         public KingLabLevelController(IDrawingSurface surface, string applicationPath)
         {
             AppPath = applicationPath;
@@ -45,9 +47,10 @@ namespace KingLabApplication
         {
             if (ApplicationState != ApplicationStateEnum.Playing) return;
             ((ImageRender)Render).ItemList = Pictures;
+            int delta = gameTimer.NextStep();
             for (int i = 0; i < Pictures.Count; i++)
             {
-                ((BackgroundSprite)Pictures[i]).AnimateImage();
+                ((BackgroundSprite)Pictures[i]).AnimateImage(delta);
             }
         }
     }

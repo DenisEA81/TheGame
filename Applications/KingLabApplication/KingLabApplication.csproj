@@ -23,6 +23,54 @@
     <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\DeciduousTree\DeciduousTree_p0_v0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p0_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p10_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p11_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p12_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p13_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p14_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p15_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p1_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p2_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p3_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p4_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p5_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p6_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p7_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p8_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p9_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="ApplicationResources\KingLabApp\Images\SingleStaticSpriteUnit\DeciduousTree\DeciduousTree_p0_v0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

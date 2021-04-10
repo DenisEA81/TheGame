@@ -31,7 +31,6 @@ namespace KingLabApplication
 
         public void AnimateImage(int delta=1)
         {
-            
             ImageIndex += delta;
             if (ImageIndex >= TemplateImage.ImageMatrix.GetLength(0)) 
                 ImageIndex -= TemplateImage.ImageMatrix.GetLength(0);
