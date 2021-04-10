@@ -7,6 +7,8 @@ using System.Drawing;
 using ApplicationController;
 using Surfaces;
 using Rendering;
+using Images;
+using ToolLibrary;
 
 namespace KingLabApplication
 {
@@ -25,6 +27,19 @@ namespace KingLabApplication
 
         public override void Start()
         {
+            XMLImageInformation[] ImageInfoList = XMLImageInformation.LoadFromXML($@"{AppPath}{ApplicationSubDirectory}Images\Images.xml");
+            List<IImageUnitTemplate> UnitTemplate = new List<IImageUnitTemplate>();
+            IImageMatrixLoader ImageMatrixLoader = new FileImageMatrixLoader($@"{AppPath}{ApplicationSubDirectory}Images\");
+            for (int i = 0; i < ImageInfoList.Length; i++)
+                UnitTemplate.Add(ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader));
+
+
+            base.Start();
+        }
+
+        public override void LogicStep()
+        {
+            if (ApplicationState != ApplicationStateEnum.Playing) return;
             Pictures = new List<IPositionedBitmap>();
             Pictures.Add(new SingleStaticSpriteUnit($@"{AppPath}{ApplicationSubDirectory}Images\BackgroundStaticSprite\Desert1\Desert1_p0_v0.png"));
             Pictures.Add(new SingleStaticSpriteUnit($@"{AppPath}{ApplicationSubDirectory}Images\SingleStaticSpriteUnit\DeciduousTree\DeciduousTree_p0_v0.png"));
@@ -32,12 +47,6 @@ namespace KingLabApplication
             {
                 Pictures[i].Position = new Point(10, 10);
             }
-            base.Start();
-        }
-
-        public override void LogicStep()
-        {
-            if (ApplicationState != ApplicationStateEnum.Playing) return;
             ((ImageRender)Render).ItemList = Pictures;
         }
     }
