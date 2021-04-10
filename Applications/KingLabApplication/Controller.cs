@@ -18,6 +18,7 @@ namespace KingLabApplication
         protected override string CursorFileName { get; } = @"Cursor\cursor.cur";
 
         protected List<IPositionedBitmap> Pictures { get; set; }
+        protected List<IImageUnitTemplate> UnitTemplate { get; set; }
 
         public KingLabLevelController(IDrawingSurface surface, string applicationPath)
         {
@@ -28,26 +29,26 @@ namespace KingLabApplication
         public override void Start()
         {
             XMLImageInformation[] ImageInfoList = XMLImageInformation.LoadFromXML($@"{AppPath}{ApplicationSubDirectory}Images\Images.xml");
-            List<IImageUnitTemplate> UnitTemplate = new List<IImageUnitTemplate>();
+            UnitTemplate = new List<IImageUnitTemplate>();
             IImageMatrixLoader ImageMatrixLoader = new FileImageMatrixLoader($@"{AppPath}{ApplicationSubDirectory}Images\");
             for (int i = 0; i < ImageInfoList.Length; i++)
                 UnitTemplate.Add(ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader));
 
-
+            Pictures = new List<IPositionedBitmap>();
+            for (int i = 0; i < UnitTemplate.Count; i++)
+                Pictures.Add(new BackgroundSprite(UnitTemplate[i]));
+            
             base.Start();
         }
 
         public override void LogicStep()
         {
             if (ApplicationState != ApplicationStateEnum.Playing) return;
-            Pictures = new List<IPositionedBitmap>();
-            Pictures.Add(new SingleStaticSpriteUnit($@"{AppPath}{ApplicationSubDirectory}Images\BackgroundStaticSprite\Desert1\Desert1_p0_v0.png"));
-            Pictures.Add(new SingleStaticSpriteUnit($@"{AppPath}{ApplicationSubDirectory}Images\SingleStaticSpriteUnit\DeciduousTree\DeciduousTree_p0_v0.png"));
-            for (int i=0;i<Pictures.Count;i++)
-            {
-                Pictures[i].Position = new Point(10, 10);
-            }
             ((ImageRender)Render).ItemList = Pictures;
+            for (int i = 0; i < Pictures.Count; i++)
+            {
+                ((BackgroundSprite)Pictures[i]).AnimateImage();
+            }
         }
     }
 }

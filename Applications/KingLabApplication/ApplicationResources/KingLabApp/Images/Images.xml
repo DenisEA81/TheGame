@@ -1,21 +1,6 @@
 ﻿<?xml version="1.0"?>
 <ArrayOfXMLImageInformation>
   <XMLImageInformation>
-    <UnitName>DeciduousTree</UnitName>
-    <ClassName>ImageUnit</ClassName>
-    <Description>Лиственное дерево</Description>
-    <CollectionLength>1</CollectionLength>
-    <VariableCount>1</VariableCount>
-    <PhysicalCenter>
-      <X>128</X>
-      <Y>192</Y>
-    </PhysicalCenter>
-    <BlockingSize>
-      <Width>32</Width>
-      <Height>32</Height>
-    </BlockingSize>
-  </XMLImageInformation>
-  <XMLImageInformation>
     <UnitName>Desert1</UnitName>
     <ClassName>Background</ClassName>
     <Description>Пустыня тип 1</Description>
@@ -28,6 +13,21 @@
     <BlockingSize>
       <Width>0</Width>
       <Height>0</Height>
+    </BlockingSize>
+  </XMLImageInformation>
+  <XMLImageInformation>
+    <UnitName>Tree1</UnitName>
+    <ClassName>ImageUnit</ClassName>
+    <Description>Лиственное дерево</Description>
+    <CollectionLength>16</CollectionLength>
+    <VariableCount>1</VariableCount>
+    <PhysicalCenter>
+      <X>128</X>
+      <Y>192</Y>
+    </PhysicalCenter>
+    <BlockingSize>
+      <Width>32</Width>
+      <Height>32</Height>
     </BlockingSize>
   </XMLImageInformation>
 </ArrayOfXMLImageInformation>
