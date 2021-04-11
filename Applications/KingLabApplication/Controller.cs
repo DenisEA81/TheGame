@@ -18,9 +18,11 @@ namespace KingLabApplication
         protected override string CursorFileName { get; } = @"Cursor\cursor.cur";
 
         protected List<IPositionedBitmap> Pictures { get; set; }
-        protected List<IImageUnitTemplate> UnitTemplate { get; set; }
+        protected Dictionary<string, Dictionary<string, IImageUnitTemplate>> UnitTemplate { get; set; }
 
-        protected GameTimer gameTimer = new GameTimer(30);
+
+        protected GameTimer gameTimerAnimation = new GameTimer(60);
+        protected GameTimer gameTimerVariant = new GameTimer(150);
 
         public KingLabLevelController(IDrawingSurface surface, string applicationPath)
         {
@@ -31,14 +33,22 @@ namespace KingLabApplication
         public override void Start()
         {
             XMLImageInformation[] ImageInfoList = XMLImageInformation.LoadFromXML($@"{AppPath}{ApplicationSubDirectory}Images\Images.xml");
-            UnitTemplate = new List<IImageUnitTemplate>();
+            UnitTemplate = new Dictionary<string, Dictionary<string, IImageUnitTemplate>>();
             IImageMatrixLoader ImageMatrixLoader = new FileImageMatrixLoader($@"{AppPath}{ApplicationSubDirectory}Images\");
             for (int i = 0; i < ImageInfoList.Length; i++)
-                UnitTemplate.Add(ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader));
+            {
+                IImageUnitTemplate temp = ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader);
 
+                if (!UnitTemplate.ContainsKey(ImageInfoList[i].ClassName))
+                    UnitTemplate.Add(ImageInfoList[i].ClassName, new Dictionary<string, IImageUnitTemplate>());
+
+                UnitTemplate[ImageInfoList[i].ClassName].Add(ImageInfoList[i].UnitName,temp);              
+                
+            }
             Pictures = new List<IPositionedBitmap>();
-            for (int i = 0; i < UnitTemplate.Count; i++)
-                Pictures.Add(new BackgroundSprite(UnitTemplate[i]));
+            foreach (Dictionary<string, IImageUnitTemplate> dc in UnitTemplate.Values)
+                foreach(IImageUnitTemplate item in dc.Values)
+                    Pictures.Add(new BackgroundSprite(item));
             
             base.Start();
         }
@@ -47,10 +57,12 @@ namespace KingLabApplication
         {
             if (ApplicationState != ApplicationStateEnum.Playing) return;
             ((ImageRender)Render).ItemList = Pictures;
-            int delta = gameTimer.NextStep();
+            int deltaAnimation = gameTimerAnimation.NextStep();
+            int deltaVariant = gameTimerVariant.NextStep();
             for (int i = 0; i < Pictures.Count; i++)
             {
-                ((BackgroundSprite)Pictures[i]).AnimateImage(delta);
+                ((BackgroundSprite)Pictures[i]).AnimateImage(deltaAnimation);
+                ((BackgroundSprite)Pictures[i]).VariantRotate(-deltaVariant);
             }
         }
     }

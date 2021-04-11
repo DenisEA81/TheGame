@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ApplicationResources.lnk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ApplicationResources\KingLabApp\Cursor\cursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -71,11 +74,1550 @@
     <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Tree1\Tree1_p9_v0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p0_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p1_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p2_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p3_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p4_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p5_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p6_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v49.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v51.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v52.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v53.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v54.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v55.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v56.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v57.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v58.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v59.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v61.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v62.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v63.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\KingLabApp\Images\ImageUnit\Villy_Move\Villy_Move_p7_v9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="ApplicationResources\KingLabApp\Images\SingleStaticSpriteUnit\DeciduousTree\DeciduousTree_p0_v0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ApplicationResources\KingLabApp\Images\Images.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_ApplicationResources.lnk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
