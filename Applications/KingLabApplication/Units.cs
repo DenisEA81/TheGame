@@ -17,19 +17,21 @@ namespace KingLabApplication
         public int ImageIndex { get; set; } = 0;
         public int VariantIndex { get; set; } = 0;
 
+        public int ZOrder { get; set; }
         public Bitmap Item { get; set; }
 
         public Point Position { get; set; }
 
-        public BackgroundSprite(IImageUnitTemplate template)
+        public BackgroundSprite(IImageUnitTemplate template, int zOrder = 0)
         {
             TemplateImage = template;
+            ZOrder = zOrder;
         }
 
         protected Bitmap SetItem() => Item = TemplateImage.ImageMatrix[ImageIndex, VariantIndex];
 
 
-        public void AnimateImage(int delta=1)
+        public virtual void AnimateImage(int delta=1)
         {
             ImageIndex += delta;
             if (ImageIndex >= TemplateImage.ImageMatrix.GetLength(0)) 
@@ -40,7 +42,7 @@ namespace KingLabApplication
             SetItem();
         }
 
-        public void VariantRotate(int delta = 1)
+        public virtual void VariantRotate(int delta = 1)
         {
             VariantIndex += delta;
             if (VariantIndex >= TemplateImage.ImageMatrix.GetLength(1))
@@ -52,5 +54,15 @@ namespace KingLabApplication
         }
     }
 
-    
+    public class UnitSprite : BackgroundSprite, IPhysicalUnit
+    {
+        public Point PhysicalCenter { get; }
+        public Size BlockingSize { get; }
+
+        public UnitSprite(IImageUnitTemplate template,int zOrder = 0):base(template,zOrder)
+        {
+            PhysicalCenter = ((IPhysicalUnit)template).PhysicalCenter;
+            BlockingSize = ((IPhysicalUnit)template).BlockingSize;
+        }
+    }
 }

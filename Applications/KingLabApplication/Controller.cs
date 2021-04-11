@@ -47,9 +47,20 @@ namespace KingLabApplication
             }
             Pictures = new List<IPositionedBitmap>();
             foreach (Dictionary<string, IImageUnitTemplate> dc in UnitTemplate.Values)
-                foreach(IImageUnitTemplate item in dc.Values)
-                    Pictures.Add(new BackgroundSprite(item));
-            
+                foreach (IImageUnitTemplate item in dc.Values)
+                {
+                    switch (item.ClassName.ToLower())
+                    {
+                        case "background":
+                           Pictures.Add(new BackgroundSprite(item,0));
+                            break;
+                        case "imageunit":
+                            Pictures.Add(new UnitSprite(item,1));
+                            break;
+                        default:
+                            throw new Exception($"Неизвестный класс <{item.ClassName}>");
+                    }
+                }
             base.Start();
         }
 
@@ -59,11 +70,16 @@ namespace KingLabApplication
             ((ImageRender)Render).ItemList = Pictures;
             int deltaAnimation = gameTimerAnimation.NextStep();
             int deltaVariant = gameTimerVariant.NextStep();
+
+            Pictures.Sort(new PositionedBitmapZComparer(PositionedBitmapZComparer.SortVector.asc));
+
             for (int i = 0; i < Pictures.Count; i++)
             {
                 ((BackgroundSprite)Pictures[i]).AnimateImage(deltaAnimation);
                 ((BackgroundSprite)Pictures[i]).VariantRotate(-deltaVariant);
             }
+
+
         }
     }
 }

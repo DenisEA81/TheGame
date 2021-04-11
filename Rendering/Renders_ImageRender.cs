@@ -12,6 +12,7 @@ namespace Rendering
     {
         Bitmap Item { get; }
         Point Position { get; set; }
+        int ZOrder { get; set; }
     }
     public class ImageRender : ARender
     {
@@ -31,5 +32,16 @@ namespace Rendering
                 Surface.DrawImage(BufferIndex, ItemList[i].Item, ItemList[i].Position.X, ItemList[i].Position.Y);
             Surface.Render();
         }
+    }
+
+    public class PositionedBitmapZComparer : IComparer<IPositionedBitmap>
+    {
+        public enum SortVector { asc=-1, dec=1 };
+
+        public SortVector Vector;
+
+        public PositionedBitmapZComparer(SortVector vector = SortVector.asc) => Vector = vector;
+        public int Compare(IPositionedBitmap x, IPositionedBitmap y)=>
+            x.ZOrder < y.ZOrder ? (int)Vector : x.ZOrder > y.ZOrder ? -(int)Vector : 0;
     }
 }

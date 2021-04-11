@@ -11,6 +11,12 @@ namespace Images
         Bitmap[,] ImageMatrix { get; }
     }
 
+    public interface IPhysicalUnit
+    {
+        Point PhysicalCenter { get; }
+        Size BlockingSize { get; }
+    }
+
     public class ImageUnitTemplateBackground : IImageUnitTemplate
     {
         public virtual string ClassName { get; } = "Background";
@@ -29,7 +35,7 @@ namespace Images
         }
     }
 
-    public class ImageUnitTemplate : ImageUnitTemplateBackground
+    public class ImageUnitTemplate : ImageUnitTemplateBackground, IPhysicalUnit
     {
         public override string ClassName { get; } = "ImageUnit";
         public Point PhysicalCenter { get; }
