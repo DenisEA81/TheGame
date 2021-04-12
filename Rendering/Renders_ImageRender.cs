@@ -12,13 +12,12 @@ namespace Rendering
     {
         Bitmap Item { get; }
         Point Position { get; set; }
-        int ZOrder { get; set; }
     }
-    public class ImageRender : ARender
+    public class ImageListRender : ARender
     {
         public List<IPositionedBitmap> ItemList { get; set; } = null;
 
-        public ImageRender(IDrawingSurface surface)
+        public ImageListRender(IDrawingSurface surface)
         {
             Surface = surface;
             DrawingFrame = new Rectangle(0, 0, surface.Width, surface.Height);
@@ -34,14 +33,24 @@ namespace Rendering
         }
     }
 
-    public class PositionedBitmapZComparer : IComparer<IPositionedBitmap>
+    public class ImageMatrixRender : ARender
     {
-        public enum SortVector { asc=-1, dec=1 };
+        public List<List<IPositionedBitmap>> ItemMatrix { get; set; } = null;
 
-        public SortVector Vector;
+        public ImageMatrixRender(IDrawingSurface surface)
+        {
+            Surface = surface;
+            DrawingFrame = new Rectangle(0, 0, surface.Width, surface.Height);
+        }
 
-        public PositionedBitmapZComparer(SortVector vector = SortVector.asc) => Vector = vector;
-        public int Compare(IPositionedBitmap x, IPositionedBitmap y)=>
-            x.ZOrder < y.ZOrder ? (int)Vector : x.ZOrder > y.ZOrder ? -(int)Vector : 0;
+        public override void Rendering(int BufferIndex = 0)
+        {
+            if (ItemMatrix == null) throw new NullReferenceException("ItemMatrix is null");
+
+            for (int i = 0; i < ItemMatrix.Count; i++)
+                for(int j=0;j<ItemMatrix?[i]?.Count;j++)
+                    Surface.DrawImage(BufferIndex, ItemMatrix[i][j].Item, ItemMatrix[i][j].Position.X, ItemMatrix[i][j].Position.Y);
+            Surface.Render();
+        }
     }
 }

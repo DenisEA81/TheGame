@@ -10,25 +10,29 @@ using ToolLibrary;
 
 namespace KingLabApplication
 {
-    
-    public class BackgroundSprite : IPositionedBitmap
+    public interface IImageAnimation
+    {
+        void AnimateImage(int delta = 1);
+        void VariantRotate(int delta = 1);
+    }
+
+    public class BackgroundSprite : IPositionedBitmap, IImageAnimation
     {
         public IImageUnitTemplate TemplateImage { get; }
         public int ImageIndex { get; set; } = 0;
         public int VariantIndex { get; set; } = 0;
 
-        public int ZOrder { get; set; }
         public Bitmap Item { get; set; }
 
         public Point Position { get; set; }
 
-        public BackgroundSprite(IImageUnitTemplate template, int zOrder = 0)
+        public BackgroundSprite(IImageUnitTemplate template)
         {
             TemplateImage = template;
-            ZOrder = zOrder;
+            SetItem();
         }
 
-        protected Bitmap SetItem() => Item = TemplateImage.ImageMatrix[ImageIndex, VariantIndex];
+        protected Bitmap SetItem() => Item = TemplateImage?.ImageMatrix?[ImageIndex, VariantIndex];
 
 
         public virtual void AnimateImage(int delta=1)
@@ -59,7 +63,7 @@ namespace KingLabApplication
         public Point PhysicalCenter { get; }
         public Size BlockingSize { get; }
 
-        public UnitSprite(IImageUnitTemplate template,int zOrder = 0):base(template,zOrder)
+        public UnitSprite(IImageUnitTemplate template):base(template)
         {
             PhysicalCenter = ((IPhysicalUnit)template).PhysicalCenter;
             BlockingSize = ((IPhysicalUnit)template).BlockingSize;

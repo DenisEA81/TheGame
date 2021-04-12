@@ -22,8 +22,8 @@
     <CollectionLength>8</CollectionLength>
     <VariableCount>64</VariableCount>
     <PhysicalCenter>
-      <X>128</X>
-      <Y>192</Y>
+      <X>0</X>
+      <Y>0</Y>
     </PhysicalCenter>
     <BlockingSize>
       <Width>32</Width>
@@ -37,8 +37,8 @@
     <CollectionLength>16</CollectionLength>
     <VariableCount>1</VariableCount>
     <PhysicalCenter>
-      <X>128</X>
-      <Y>192</Y>
+      <X>0</X>
+      <Y>0</Y>
     </PhysicalCenter>
     <BlockingSize>
       <Width>32</Width>
