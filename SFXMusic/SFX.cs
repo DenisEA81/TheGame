@@ -2,23 +2,9 @@
 
 namespace SFXMusic
 {
-    public enum SFXPlayMode { Single = 0, Repeat = 1 }
     public interface ISFX
     {
-        
-        void Start(SFXPlayMode mode);
+        void Start();
         void Stop();
-    }
-    public class SFX : ISFX
-    {
-        public void Start(SFXPlayMode mode)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

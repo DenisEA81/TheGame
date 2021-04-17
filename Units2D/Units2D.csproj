@@ -5,4 +5,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Images\Images.csproj" />
+    <ProjectReference Include="..\SFXMusic\SFXMusic.csproj" />
+  </ItemGroup>
+
 </Project>

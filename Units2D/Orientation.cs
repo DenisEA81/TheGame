@@ -16,38 +16,54 @@ namespace Units2D
             {
                 _CurrentDegrees = value % 360;
                 if (_CurrentDegrees < 0) _CurrentDegrees += 360;
-                if (_CurrentDegrees >= 360) _CurrentDegrees -= 360;
+                _CurrentOrientation = (int)(_CurrentDegrees/360 * _OrientationCount);
+                _CurrentDegrees = _DegreesStep * _CurrentOrientation;
             } 
         }
 
-        public float DegreesStep { get; protected set; } = 360;
-
-
-        private int _StepCount=1;
-        public int StepCount 
-        {
-            get=>_StepCount;
+        private float _DegreesStep = 360;
+        public float DegreesStep 
+        { 
+            get=>_DegreesStep; 
             set
             {
-                if (value <= 0) throw new ArgumentOutOfRangeException("StepCount");
+                if (value <= 0 | value > 360.0001) throw new ArgumentOutOfRangeException("DegreesStep");
                 _CurrentDegrees = 0;
-                _CurrentStep = 0;
-                _StepCount = value;
-                DegreesStep = 360 / _StepCount;
+                _CurrentOrientation = 0;
+                _DegreesStep = value;
+                _OrientationCount = (int)(360 / _DegreesStep);
+                _DegreesStep = 360 / _OrientationCount;
+            }
+        } 
+
+
+        private int _OrientationCount=1;
+        public int OrientationCount 
+        {
+            get=>_OrientationCount;
+            set
+            {
+                if (value <= 0) throw new ArgumentOutOfRangeException("OrientationCount");
+                _CurrentDegrees = 0;
+                _CurrentOrientation = 0;
+                _OrientationCount = value;
+                _DegreesStep = 360 / _OrientationCount;
             }
         }
 
-        private int _CurrentStep;
-        public int CurrentStep 
+        private int _CurrentOrientation;
+        public int CurrentOrientation 
         {
-            get => _CurrentStep;
+            get => _CurrentOrientation;
             set
             {
-                _CurrentStep = value % _StepCount;
-                if (_CurrentStep < 0) _CurrentStep += _StepCount;
-                if (_CurrentStep >= _StepCount) _CurrentStep -= _StepCount;
-                _CurrentDegrees = DegreesStep * _CurrentStep;
+                _CurrentOrientation = value % _OrientationCount;
+                if (_CurrentOrientation < 0) _CurrentOrientation += _OrientationCount;
+                _CurrentDegrees = DegreesStep * _CurrentOrientation;
             }
         }
+
+        public bool Inc(int DestanationOrientation)=>DestanationOrientation == (++CurrentOrientation);
+        public bool Dec(int DestanationOrientation) =>DestanationOrientation == (--CurrentOrientation);
     }
 }
