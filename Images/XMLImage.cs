@@ -10,7 +10,7 @@ namespace Images
         string UnitName { get; set; }
         string ClassName { get; set; }
         string Description { get; set; }
-        int CollectionLength { get; set; }
+        int AnimationCount { get; set; }
         int VariableCount { get; set; }
         Point PhysicalCenter { get; set; }
         Size BlockingSize { get; set; }
@@ -28,7 +28,7 @@ namespace Images
         public string UnitName { get; set; }
         public string ClassName { get; set; }
         public string Description { get; set; }
-        public int CollectionLength { get; set; }
+        public int AnimationCount { get; set; }
         public int VariableCount { get; set; }
         public Point PhysicalCenter { get; set; }
         public Size BlockingSize { get; set; }
@@ -49,8 +49,8 @@ namespace Images
         public Bitmap[,] ReadBitmapCollection(IImageInformation item)
         {
             
-            Bitmap[,] result = new Bitmap[item.CollectionLength, item.VariableCount];
-            for (int i = 0; i < item.CollectionLength; i++)
+            Bitmap[,] result = new Bitmap[item.AnimationCount, item.VariableCount];
+            for (int i = 0; i < item.AnimationCount; i++)
                 for (int j = 0; j < item.VariableCount; j++)
                 {
                     string fileName = $"{RootPath}{item.ClassName}\\{item.UnitName}\\{item.UnitName}_p{i}_v{j}.{Ext}";

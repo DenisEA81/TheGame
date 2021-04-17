@@ -27,10 +27,6 @@ namespace KingLabApplication
         /// </summary>
         protected Dictionary<string, Dictionary<string, IImageUnitTemplate>> UnitTemplate { get; set; }
 
-        
-
-
-
         protected GameTimer gameTimerAnimation = new GameTimer(60);
         protected GameTimer gameTimerVariant = new GameTimer(150);
 

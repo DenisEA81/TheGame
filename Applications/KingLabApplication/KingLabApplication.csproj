@@ -1621,4 +1621,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ApplicationResources\KingLabApp\Cursor\" />
+    <Folder Include="ApplicationResources\KingLabApp\Images\" />
+  </ItemGroup>
+
 </Project>
