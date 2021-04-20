@@ -80,9 +80,9 @@ namespace KingLabApplication
                 }
             // добавление дополнительной фоновой клетки
 
-            FullScenePictureList[0].Add(new BackgroundSprite(UnitTemplate["background"].ToList()[0].Value));
-            почистить структуру проекта. Привести к стандартам. 
-            улучшить тестовый Controller
+          //  FullScenePictureList[0].Add(new BackgroundSprite(UnitTemplate["background"].ToList()[0].Value));
+          //  почистить структуру проекта. Привести к стандартам. 
+          //  улучшить тестовый Controller
 
             //добавление юнита
             #endregion
