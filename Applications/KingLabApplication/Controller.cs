@@ -78,6 +78,13 @@ namespace KingLabApplication
                             throw new Exception($"Неизвестный класс <{item.ClassName}>");
                     }
                 }
+            // добавление дополнительной фоновой клетки
+
+            FullScenePictureList[0].Add(new BackgroundSprite(UnitTemplate["background"].ToList()[0].Value));
+            почистить структуру проекта. Привести к стандартам. 
+            улучшить тестовый Controller
+
+            //добавление юнита
             #endregion
 
             base.Start();

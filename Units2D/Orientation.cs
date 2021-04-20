@@ -65,5 +65,14 @@ namespace Units2D
 
         public bool Inc(int DestanationOrientation)=>DestanationOrientation == (++CurrentOrientation);
         public bool Dec(int DestanationOrientation) =>DestanationOrientation == (--CurrentOrientation);
+
+        public bool Turn(float DestanationDegrees)
+        {
+            float delta = DestanationDegrees - _CurrentDegrees;
+            if (Math.Abs(delta) < _DegreesStep) return true;
+            if (Math.Abs(delta) <= 180) CurrentDegrees += (delta > 0)?_DegreesStep:-_DegreesStep;
+            else CurrentDegrees -= (delta > 0)?_DegreesStep:-_DegreesStep;
+            return (Math.Abs(DestanationDegrees - _CurrentDegrees) < _DegreesStep);
+        }
     }
 }

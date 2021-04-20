@@ -10,14 +10,44 @@ namespace Units2D
 {
     public interface IActions
     {
-        int BreakLevel { get; set; }
-        ISFX AcionSFX { get; set; }
-        IImageUnitTemplate ImageUnit { get; protected set; } 
-        int ActionPhaseCount { get; protected set; }
-        IEnumerable<int> ActionPhaseMillisecondsLength { get; protected set; }
-        int ProgressPhase { get; protected set; }
-        bool Progress(bool ReplayOnEnd = false);
-        void Start(int startProgressPhase=0);
-        void Stop();
+        IActions Progress();
     }
+
+    public abstract class AAction : IActions
+    {
+        protected IActions NextAction;
+        public abstract IActions Progress();
+    }
+
+
+    public class ActionWaitForTime : AAction
+    {
+        public readonly DateTime DestanationTime;
+
+        public ActionWaitForTime(IActions actionAfterTimer, int timerMilliseconds)
+        {
+            NextAction = actionAfterTimer;
+            DestanationTime = DateTime.Now.AddMilliseconds(timerMilliseconds);
+        }
+        public override IActions Progress()=>
+            (DateTime.Now.Ticks <= DestanationTime.Ticks)?NextAction:this;
+    }
+
+    public class ActionTurnUnit2D : AAction
+    {
+        public float DestanationDegrees { get; protected set; }
+        public IUnit2D TurningUnit { get; protected set; }
+        public ActionTurnUnit2D(IUnit2D unit2D, float destanationDegrees, IActions nextAction)
+        {
+            NextAction = nextAction;
+            DestanationDegrees = destanationDegrees;
+            TurningUnit = unit2D;
+        }
+
+        public override IActions Progress()=>
+            TurningUnit.UnitOrientation.Turn(DestanationDegrees) ? NextAction : this;
+    }
+
+
+
 }

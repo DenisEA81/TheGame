@@ -14,6 +14,6 @@ namespace Units2D
         Point3D<int> BlockPosition { get; protected set; }
         Orientation UnitOrientation { get; set; }
         IEnumerable<IActions> ActionDictionary { get; protected set; }
-        IEnumerable<IActions> ActionCurrentList { get; protected set; }
+        IEnumerable<IActions> ActionStack { get; protected set; }
     }
 }
