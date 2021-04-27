@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\ApplicationController\ApplicationController.csproj" />
     <ProjectReference Include="..\..\Images\Images.csproj" />
+    <ProjectReference Include="..\..\Units2D\Units2D.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,6 +7,10 @@
     <ApplicationIcon>APP.ico</ApplicationIcon>
     <AssemblyName>KingOfTheLabyrinth</AssemblyName>
     <RootNamespace>KingLab</RootNamespace>
+    <Authors>Егоров Денис Алексеевич</Authors>
+    <Company>Dzun Projects</Company>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Product>Король лабиринтов</Product>
   </PropertyGroup>
 
   <ItemGroup>

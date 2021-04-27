@@ -70,12 +70,14 @@ namespace KingLab
         }
 
         private void timerAction_Tick(object sender, EventArgs e)
-        {
+        {            
             timerAction.Enabled = false;
             while (!IsStopApplication)
             {
+                DateTime LastDate = DateTime.Now;
                 CurrentAppController.LogicStep();
                 CurrentAppController.RedrawScene();
+                this.Text = $"{Application.ProductName}. FPS: {(1000/ DateTime.Now.Subtract(LastDate).TotalMilliseconds):f1}";
                 IsStopApplication |= CurrentAppController.ApplicationState == ApplicationStateEnum.Stop; 
                 Thread.Sleep(1);
                 Application.DoEvents();

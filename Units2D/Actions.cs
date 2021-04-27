@@ -11,26 +11,65 @@ namespace Units2D
     public interface IActions
     {
         IActions Progress();
+        IActions Start();
     }
-
+    
     public abstract class AAction : IActions
     {
         protected IActions NextAction;
         public abstract IActions Progress();
+        public virtual IActions Start() => Progress();
     }
-
 
     public class ActionWaitForTime : AAction
     {
-        public readonly DateTime DestanationTime;
-
+        public DateTime DestanationTime { get; protected set; }
+        public int TimerMilliseconds { get; protected set; }
         public ActionWaitForTime(IActions actionAfterTimer, int timerMilliseconds)
         {
             NextAction = actionAfterTimer;
             DestanationTime = DateTime.Now.AddMilliseconds(timerMilliseconds);
+            TimerMilliseconds = timerMilliseconds;
         }
-        public override IActions Progress()=>
-            (DateTime.Now.Ticks <= DestanationTime.Ticks)?NextAction:this;
+        public override IActions Progress() =>
+            (DateTime.Now.Ticks <= DestanationTime.Ticks) ? NextAction : this;
+
+        public override IActions Start()
+        {
+            DestanationTime = DateTime.Now.AddMilliseconds(TimerMilliseconds);
+            return base.Start();
+        }
+    }
+
+    public class ActionInTimeSteps : AAction
+    {
+        public int MillisecondStepLength { get; protected set; }
+        protected IActions TimerStep = null; 
+        public IActions ThisAction { get; protected set; }
+        public ActionInTimeSteps(IActions nextAction, IActions thisAction, int millisecondStepLength)
+        {
+            MillisecondStepLength = millisecondStepLength;
+            NextAction = nextAction;
+            ThisAction = thisAction;
+        }
+
+        public override IActions Start()
+        {
+            if ((ThisAction = ThisAction.Start())==null) return null;
+            TimerStep = new ActionWaitForTime(null,MillisecondStepLength).Start();
+            return base.Start();
+        }
+        public override IActions Progress()
+        {
+            if (TimerStep != null) 
+                TimerStep = TimerStep.Progress();
+            else
+            {
+                if ((ThisAction = ThisAction.Progress())==null) return NextAction;
+                TimerStep = new ActionWaitForTime(null, MillisecondStepLength).Start();
+            }
+            return this;
+        }
     }
 
     public class ActionTurnUnit2D : AAction
@@ -43,11 +82,7 @@ namespace Units2D
             DestanationDegrees = destanationDegrees;
             TurningUnit = unit2D;
         }
-
-        public override IActions Progress()=>
+        public override IActions Progress() =>
             TurningUnit.UnitOrientation.Turn(DestanationDegrees) ? NextAction : this;
     }
-
-
-
 }

@@ -9,6 +9,7 @@ using Surfaces;
 using Rendering;
 using Images;
 using ToolLibrary;
+using Units2D;
 
 namespace KingLabApplication
 {
@@ -21,14 +22,22 @@ namespace KingLabApplication
         /// Матрица рендеринга
         /// </summary>
         protected List<List<IPositionedBitmap>> FullScenePictureList { get; set; }
-        
+
         /// <summary>
         /// Словарь шаблонов Image
         /// </summary>
         protected Dictionary<string, Dictionary<string, IImageUnitTemplate>> UnitTemplate { get; set; }
 
         protected GameTimer gameTimerAnimation = new GameTimer(60);
-        protected GameTimer gameTimerVariant = new GameTimer(150);
+        protected GameTimer gameTimerVariant = new GameTimer(60);
+
+        public IUnit2D TestUnit = new Unit2D()
+        {
+            Position = new Point3D<float>(375, 0, 0),
+            UnitOrientation = new Orientation() { OrientationCount = 8 }, Actions = new List<IActions>() { new ActionInTimeSteps(null, new ActionTurnUnit2D(this, 180, null), 500) }
+                
+        
+        }
 
         public KingLabLevelController(IDrawingSurface surface, string applicationPath)
         {
@@ -46,10 +55,10 @@ namespace KingLabApplication
             {
                 IImageUnitTemplate temp = ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader);
 
-                if (!UnitTemplate.ContainsKey(ImageInfoList[i].ClassName))
-                    UnitTemplate.Add(ImageInfoList[i].ClassName, new Dictionary<string, IImageUnitTemplate>());
+                if (!UnitTemplate.ContainsKey(ImageInfoList[i].ClassName.ToUpper()))
+                    UnitTemplate.Add(ImageInfoList[i].ClassName.ToUpper(), new Dictionary<string, IImageUnitTemplate>());
 
-                UnitTemplate[ImageInfoList[i].ClassName].Add(ImageInfoList[i].UnitName,temp);              
+                UnitTemplate[ImageInfoList[i].ClassName.ToUpper()].Add(ImageInfoList[i].UnitName.ToUpper(), temp);              
                 
             }
             #endregion
@@ -62,12 +71,12 @@ namespace KingLabApplication
             foreach (Dictionary<string, IImageUnitTemplate> dc in UnitTemplate.Values)
                 foreach (IImageUnitTemplate item in dc.Values)
                 {
-                    switch (item.ClassName.ToLower())
+                    switch (item.ClassName.ToUpper())
                     {
-                        case "background":
+                        case "BACKGROUND":
                             FullScenePictureList[0].Add(new BackgroundSprite(item));
                             break;
-                        case "imageunit":
+                        case "IMAGEUNIT":
                             UnitSprite temp = new UnitSprite(item);
                             temp.Position = new Point(XXX, YYY);
                             YYY = 0;
@@ -79,12 +88,16 @@ namespace KingLabApplication
                     }
                 }
             // добавление дополнительной фоновой клетки
-
-          //  FullScenePictureList[0].Add(new BackgroundSprite(UnitTemplate["background"].ToList()[0].Value));
-          //  почистить структуру проекта. Привести к стандартам. 
-          //  улучшить тестовый Controller
-
-            //добавление юнита
+            {
+                
+                IPositionedBitmap itm = new BackgroundSprite(UnitTemplate["BACKGROUND"].ToList()[0].Value);
+                itm.Position = new Point(itm.Item.Width,0);
+                FullScenePictureList[0].Add(itm);
+                //добавление юнита
+                IPositionedBitmap itmU = new UnitSprite(UnitTemplate["IMAGEUNIT"].ToList()[0].Value);
+                itmU.Position = new Point(3*itm.Item.Width/2 - itmU.Item.Width/2, (itm.Item.Height-itmU.Item.Height)/2);
+                FullScenePictureList[1].Add(itmU);
+            }
             #endregion
 
             base.Start();

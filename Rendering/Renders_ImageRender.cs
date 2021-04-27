@@ -46,7 +46,7 @@ namespace Rendering
         public override void Rendering(int BufferIndex = 0)
         {
             if (ItemMatrix == null) throw new NullReferenceException("ItemMatrix is null");
-
+            Surface.ResetSurfaces();
             for (int i = 0; i < ItemMatrix.Count; i++)
                 for(int j=0;j<ItemMatrix?[i]?.Count;j++)
                     Surface.DrawImage(BufferIndex, ItemMatrix[i][j].Item, ItemMatrix[i][j].Position.X, ItemMatrix[i][j].Position.Y);
