@@ -31,6 +31,7 @@ namespace KingLabApplication
         protected GameTimer gameTimerAnimation = new GameTimer(60);
         protected GameTimer gameTimerVariant = new GameTimer(60);
 
+        /*
         public IUnit2D TestUnit = new Unit2D()
         {
             Position = new Point3D<float>(375, 0, 0),
@@ -38,6 +39,7 @@ namespace KingLabApplication
                 
         
         }
+        */
 
         public KingLabLevelController(IDrawingSurface surface, string applicationPath)
         {
