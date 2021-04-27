@@ -1,18 +1,32 @@
-﻿namespace Units2D
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Units2D
 {
     public class Point2D<T>
     {
         public T X { get; set; }
         public T Y { get; set; }
-
-        public Point2D(T x, T y) { X = x; Y = y; }
-        public Point2D(Point2D<T> point) { X = point.X; Y = point.Y; }
+        public Point2D(T x = default, T y = default)
+        {
+            X=x;
+            Y=y;
+        }
     }
 
-    public class Point3D<T>:Point2D<T>
+    public class Point3D<T>
     {
+        public T X { get; set; }
+        public T Y { get; set; }
         public T Z { get; set; }
-        public Point3D(T x, T y, T z):base(x,y) {Z = z; }
-        public Point3D(Point3D<T> point):base(point) { Z = point.Z; }
+        public Point3D(T x = default, T y = default, T z = default)
+        {
+            X = x;
+            Y = y;
+            Z = z;
+        }
     }
 }

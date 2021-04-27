@@ -5,12 +5,14 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>APP.ico</ApplicationIcon>
-    <AssemblyName>KingOfTheLabyrinth</AssemblyName>
-    <RootNamespace>KingLab</RootNamespace>
+    <AssemblyName>MainWindowProject</AssemblyName>
+    <RootNamespace>MainWindowProject</RootNamespace>
     <Authors>Егоров Денис Алексеевич</Authors>
-    <Company>Dzun Projects</Company>
+    <Company>OldSchoolProjects</Company>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Product>Король лабиринтов</Product>
+    <Product>TheGame</Product>
+    <PackageId>TheGame</PackageId>
+    <Description>Игровой движок для 2D игр GDI+</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Applications\KingLabApplication\KingLabApplication.csproj" />
+    <ProjectReference Include="..\Applications\KingLabApplication\MapEditor.csproj" />
     <ProjectReference Include="..\ToolLibrary\ToolLibrary.csproj" />
   </ItemGroup>
 

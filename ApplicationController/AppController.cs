@@ -13,6 +13,7 @@ namespace ApplicationController
     public enum ApplicationStateEnum { Playing, Stop }
     public interface IApplicationController
     {
+        string Name { get; }
         IRender Render { get; }
         ApplicationStateEnum ApplicationState { get; }
         Cursor GetAppCursor();
@@ -24,6 +25,7 @@ namespace ApplicationController
 
     public abstract class AApplicationController : IApplicationController
     {
+        public abstract string Name { get; }
         public abstract string ApplicationSubDirectory { get; }
         protected abstract string CursorFileName { get; }
         protected string AppPath { get=>_AppPath; set { _AppPath = (value.Trim().EndsWith("\\") ? value.Trim() : value.Trim() + "\\"); } }

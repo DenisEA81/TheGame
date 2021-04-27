@@ -1,5 +1,5 @@
 ﻿
-namespace KingLab
+namespace MainWindowProject
 {
     partial class FormMain
     {
@@ -75,7 +75,7 @@ namespace KingLab
             this.MinimumSize = new System.Drawing.Size(520, 543);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Король лабиринтов";
+            this.Text = "TheGame";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);

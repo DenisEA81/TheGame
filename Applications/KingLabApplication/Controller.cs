@@ -11,12 +11,13 @@ using Images;
 using ToolLibrary;
 using Units2D;
 
-namespace KingLabApplication
+namespace MapEditor
 {
-    public class KingLabLevelController : AApplicationController
+    public class MapEditorController : AApplicationController
     {
-        public override string ApplicationSubDirectory { get; } = @"ApplicationResources\KingLabApp\";
-        protected override string CursorFileName { get; } = @"Cursor\cursor.cur";
+        public override string Name { get=>"MapEditor"; }
+        public override string ApplicationSubDirectory { get=>@"ApplicationResources\MapEditor\"; } 
+        protected override string CursorFileName { get => @"Cursor\cursor.cur"; }
 
         /// <summary>
         /// Матрица рендеринга
@@ -41,7 +42,7 @@ namespace KingLabApplication
         }
         */
 
-        public KingLabLevelController(IDrawingSurface surface, string applicationPath)
+        public MapEditorController(IDrawingSurface surface, string applicationPath)
         {
             AppPath = applicationPath;
             Render = new ImageMatrixRender(surface);

@@ -8,7 +8,7 @@ using Rendering;
 using Images;
 using ToolLibrary;
 
-namespace KingLabApplication
+namespace MapEditor
 {
     public interface IImageAnimation
     {

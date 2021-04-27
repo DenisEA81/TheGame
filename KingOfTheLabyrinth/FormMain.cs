@@ -4,13 +4,14 @@ using System.Windows.Forms;
 using Surfaces;
 using ApplicationController;
 //using TestApplication;
-using KingLabApplication;
+using MapEditor;
 
-namespace KingLab
+namespace MainWindowProject
 {
     public partial class FormMain : Form
     {
         public bool IsStopApplication = false;
+        private FormWindowState _WindowState = FormWindowState.Normal;
         public IApplicationController CurrentAppController { get; set; } = null;
 
         public FormMain()
@@ -23,8 +24,9 @@ namespace KingLab
             try
             {
                 this.WindowState = FormWindowState.Maximized;
-                CurrentAppController = new KingLabLevelController(new WFDrawingSurface(PictureScreen, 1, false),Application.StartupPath);
+                CurrentAppController = new MapEditorController(new WFDrawingSurface(PictureScreen, 1, false),Application.StartupPath);
                 this.Cursor = CurrentAppController.GetAppCursor();
+                this.Text = CurrentAppController.Name;
                 CurrentAppController.Start();
                 timerAction.Enabled = true;
             }
@@ -46,6 +48,7 @@ namespace KingLab
                     if (this.TopMost)
                     {
                         this.FormBorderStyle = FormBorderStyle.None;
+                        _WindowState = this.WindowState;
                         this.WindowState = FormWindowState.Normal;
                         this.WindowState = FormWindowState.Maximized;
                         this.PanelScreen.BorderStyle = BorderStyle.None;
@@ -54,6 +57,7 @@ namespace KingLab
                     {
                         this.FormBorderStyle = FormBorderStyle.Sizable;
                         this.PanelScreen.BorderStyle = BorderStyle.Fixed3D;
+                        this.WindowState = _WindowState;
                     }
                     e.SuppressKeyPress = true;
                 }
@@ -77,7 +81,7 @@ namespace KingLab
                 DateTime LastDate = DateTime.Now;
                 CurrentAppController.LogicStep();
                 CurrentAppController.RedrawScene();
-                this.Text = $"{Application.ProductName}. FPS: {(1000/ DateTime.Now.Subtract(LastDate).TotalMilliseconds):f1}";
+                this.Text = $"{CurrentAppController.Name}. FPS: {(1000/ DateTime.Now.Subtract(LastDate).TotalMilliseconds):f1}";
                 IsStopApplication |= CurrentAppController.ApplicationState == ApplicationStateEnum.Stop; 
                 Thread.Sleep(1);
                 Application.DoEvents();
