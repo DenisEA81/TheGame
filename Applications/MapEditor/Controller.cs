@@ -16,7 +16,7 @@ namespace MapEditor
     public class MapEditorController : AApplicationController
     {
         public override string Name { get=>"MapEditor"; }
-        public override string ApplicationSubDirectory { get=>@"ApplicationResources\MapEditor\"; } 
+        public override string ApplicationSubDirectory { get=> @"ApplicationResources\MapEditor\"; } 
         protected override string CursorFileName { get => @"Cursor\cursor.cur"; }
 
         /// <summary>

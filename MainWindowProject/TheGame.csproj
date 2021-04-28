@@ -4,25 +4,20 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>APP.ico</ApplicationIcon>
-    <AssemblyName>MainWindowProject</AssemblyName>
-    <RootNamespace>MainWindowProject</RootNamespace>
+    <ApplicationIcon>Properties\APP.ico</ApplicationIcon>
+    <AssemblyName>TheGame</AssemblyName>
+    <RootNamespace>TheGame</RootNamespace>
     <Authors>Егоров Денис Алексеевич</Authors>
     <Company>OldSchoolProjects</Company>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Product>TheGame</Product>
     <PackageId>TheGame</PackageId>
     <Description>Игровой движок для 2D игр GDI+</Description>
+    <StartupObject>TheGame.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ApplicationResources\**" />
-    <EmbeddedResource Remove="ApplicationResources\**" />
-    <None Remove="ApplicationResources\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Applications\KingLabApplication\MapEditor.csproj" />
+    <ProjectReference Include="..\Applications\MapEditor\MapEditor.csproj" />
     <ProjectReference Include="..\ToolLibrary\ToolLibrary.csproj" />
   </ItemGroup>
 
@@ -39,6 +34,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ApplicationResources\MapEditor\Cursor\cursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="ApplicationResources\MapEditor\Images\Images.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

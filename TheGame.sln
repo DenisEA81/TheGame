@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainWindowProject", "KingOfTheLabyrinth\MainWindowProject.csproj", "{3B2A433B-AF84-4A1E-AF95-63FFD48C8BC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheGame", "MainWindowProject\TheGame.csproj", "{3B2A433B-AF84-4A1E-AF95-63FFD48C8BC1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surfaces", "Surfaces\Surfaces.csproj", "{54C6D485-B90B-4F43-BC10-043EDCE04C95}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rendering", "Rendering\Rend
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationController", "ApplicationController\ApplicationController.csproj", "{E1470D02-4449-4EC0-859F-85E380C304CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapEditor", "Applications\KingLabApplication\MapEditor.csproj", "{7016278E-6BC4-47BE-821C-0BE091B1854B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapEditor", "Applications\MapEditor\MapEditor.csproj", "{7016278E-6BC4-47BE-821C-0BE091B1854B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolLibrary", "ToolLibrary\ToolLibrary.csproj", "{6691B2D7-9E35-453E-A222-74C16474FE04}"
 EndProject

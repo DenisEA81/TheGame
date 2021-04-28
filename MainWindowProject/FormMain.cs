@@ -3,10 +3,9 @@ using System.Threading;
 using System.Windows.Forms;
 using Surfaces;
 using ApplicationController;
-//using TestApplication;
 using MapEditor;
 
-namespace MainWindowProject
+namespace TheGame
 {
     public partial class FormMain : Form
     {
@@ -16,7 +15,7 @@ namespace MainWindowProject
 
         public FormMain()
         {
-            InitializeComponent();
+            InitializeComponent();        
         }
 
         private void FormMain_Load(object sender, EventArgs e)

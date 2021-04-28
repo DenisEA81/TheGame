@@ -1,5 +1,5 @@
 ﻿
-namespace MainWindowProject
+namespace TheGame
 {
     partial class FormMain
     {

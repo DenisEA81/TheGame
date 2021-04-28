@@ -15,7 +15,7 @@
     <None Update="ApplicationResources.lnk">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="ApplicationResources\KingLabApp\Cursor\cursor.cur">
+    <None Update="ApplicationResources\MapEditor\Cursor\cursor.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="ApplicationResources\KingLabApp\Images\BackgroundStaticSprite\Desert1\Desert1_p0_v0.png">
@@ -1614,17 +1614,9 @@
     <None Update="ApplicationResources\KingLabApp\Images\SingleStaticSpriteUnit\DeciduousTree\DeciduousTree_p0_v0.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="ApplicationResources\KingLabApp\Images\Images.xml">
+    <None Update="ApplicationResources\MapEditor\Images\Images.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="_ApplicationResources.lnk">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ApplicationResources\KingLabApp\Cursor\" />
-    <Folder Include="ApplicationResources\KingLabApp\Images\" />
   </ItemGroup>
 
 </Project>
