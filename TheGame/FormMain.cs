@@ -22,7 +22,6 @@ namespace TheGame
         {
             try
             {
-                this.WindowState = FormWindowState.Maximized;
                 CurrentAppController = new MapEditorController(new WFDrawingSurface(PictureScreen, 1, false),Application.StartupPath);
                 this.Cursor = CurrentAppController.GetAppCursor();
                 this.Text = CurrentAppController.Name;
