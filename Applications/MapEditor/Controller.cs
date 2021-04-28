@@ -15,8 +15,8 @@ namespace MapEditor
 {
     public class MapEditorController : AApplicationController
     {
-        public override string Name { get=>"MapEditor"; }
-        public override string ApplicationSubDirectory { get=> @"ApplicationResources\MapEditor\"; } 
+        public override string Name { get => "MapEditor"; }
+        public override string ApplicationSubDirectory { get => @"ApplicationResources\MapEditor\"; }
         protected override string CursorFileName { get => @"Cursor\cursor.cur"; }
 
         /// <summary>
@@ -32,15 +32,7 @@ namespace MapEditor
         protected GameTimer gameTimerAnimation = new GameTimer(60);
         protected GameTimer gameTimerVariant = new GameTimer(60);
 
-        /*
-        public IUnit2D TestUnit = new Unit2D()
-        {
-            Position = new Point3D<float>(375, 0, 0),
-            UnitOrientation = new Orientation() { OrientationCount = 8 }, Actions = new List<IActions>() { new ActionInTimeSteps(null, new ActionTurnUnit2D(this, 180, null), 500) }
-                
-        
-        }
-        */
+        public IUnit2D TestUnit=null;
 
         public MapEditorController(IDrawingSurface surface, string applicationPath)
         {
@@ -64,6 +56,20 @@ namespace MapEditor
                 UnitTemplate[ImageInfoList[i].ClassName.ToUpper()].Add(ImageInfoList[i].UnitName.ToUpper(), temp);              
                 
             }
+            #endregion
+
+            #region Создание TestUnit
+            TestUnit = new Unit2D("Villy",
+                    new Point3D<float>(375, 0, 0),
+                    new Point3D<int>(20, 20, 50),
+                    new Point3D<int>(0, 0, 0),
+                    new Orientation() { OrientationCount = 8 },
+                    null);
+            TestUnit.Actions = 
+                    new List<IActions>()
+                        {
+                            new ActionInTimeSteps(null, new ActionTurnUnit2D(TestUnit, 180, null), 500)
+                        };
             #endregion
 
             #region Загрузка текущей сцены
@@ -113,11 +119,16 @@ namespace MapEditor
             int deltaAnimation = gameTimerAnimation.NextStep();
             int deltaVariant = gameTimerVariant.NextStep();
 
-            
+            #region Выполнение всех Actions юнитов
+            /*
+            for ( int i=0; i< ((List<IActions>)TestUnit.Actions).Count; i++)
+                ((List<IActions>)TestUnit.Actions)[i] = ((List<IActions>)TestUnit.Actions)[i].Progress();
+            */
+            #endregion
 
 
             #region Подготовка матрицы рендеринга
-            var CurrentPictures = new List<List<IPositionedBitmap>>() { new List<IPositionedBitmap>(), new List<IPositionedBitmap> () };
+            var CurrentPictures = new List<List<IPositionedBitmap>>() { new List<IPositionedBitmap>(), new List<IPositionedBitmap> ()/*, new List<IPositionedBitmap>()*/ };
 
             for (int i = 0; i < FullScenePictureList[0].Count; i++)
                 //if
@@ -125,6 +136,11 @@ namespace MapEditor
             for (int i = 0; i < FullScenePictureList[1].Count; i++)
                 //if
                 CurrentPictures[1].Add(FullScenePictureList[1][i]);
+           
+            /*
+            for (int i = 0; i < FullScenePictureList[2].Count; i++)
+                CurrentPictures[2].Add(TestUnit.Actions);
+            */
 
             CurrentPictures[1].Sort(new PositionedPhysicalBitmapComparer( PositionedPhysicalBitmapComparer.SortDirection.Asc));
 

@@ -10,12 +10,14 @@ namespace Units2D
 {
     public interface IActions
     {
+        string Name { get; }
         IActions Progress();
         IActions Start();
     }
     
     public abstract class AAction : IActions
     {
+        public abstract string Name { get; }
         protected IActions NextAction;
         public abstract IActions Progress();
         public virtual IActions Start() => Progress();
@@ -23,6 +25,7 @@ namespace Units2D
 
     public class ActionWaitForTime : AAction
     {
+        public override string Name { get => "WaitTimer"; }
         public DateTime DestanationTime { get; protected set; }
         public int TimerMilliseconds { get; protected set; }
         public ActionWaitForTime(IActions actionAfterTimer, int timerMilliseconds)
@@ -43,6 +46,7 @@ namespace Units2D
 
     public class ActionInTimeSteps : AAction
     {
+        public override string Name { get => "WaitTimerSteps"; }
         public int MillisecondStepLength { get; protected set; }
         protected IActions TimerStep = null; 
         public IActions ThisAction { get; protected set; }
@@ -74,6 +78,7 @@ namespace Units2D
 
     public class ActionTurnUnit2D : AAction
     {
+        public override string Name { get => "Turn"; }
         public float DestanationDegrees { get; protected set; }
         public IUnit2D TurningUnit { get; protected set; }
         public ActionTurnUnit2D(IUnit2D unit2D, float destanationDegrees, IActions nextAction)
