@@ -90,4 +90,30 @@ namespace Units2D
         public override IActions Progress() =>
             TurningUnit.UnitOrientation.Turn(DestanationDegrees) ? NextAction : this;
     }
+
+    public class ActionMoveUnit2D : AAction
+    {
+        public override string Name { get => "Move"; }
+        public Point2D<int> DestanationPoint { get; protected set; }
+        public double SpeedPerSecond { get; protected set; }
+        public IUnit2D MovingUnit { get; protected set; }
+        protected DateTime LastStepTime = default;
+        public ActionMoveUnit2D(IUnit2D unit2D, Point2D<int> destanationPoint, double speedPerSecond,  IActions nextAction)
+        {
+            MovingUnit = unit2D;
+            DestanationPoint = destanationPoint;
+            SpeedPerSecond = speedPerSecond;
+            NextAction = nextAction;
+            LastStepTime = default;
+        }
+        public override IActions Progress()
+        {
+            if (LastStepTime == default) LastStepTime = DateTime.Now;
+            double StepLength = (DateTime.Now.Subtract(LastStepTime).TotalMilliseconds / 1000.0) * SpeedPerSecond;
+            Single 
+
+
+            MovingUnit.Position.MoveStepTo(DestanationPoint, StepLength) ? NextAction : this;
+        }
+    }
 }

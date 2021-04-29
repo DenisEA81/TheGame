@@ -11,7 +11,7 @@ namespace Units2D
     public interface IUnit2D
     {
         string Name { get; set; }
-        Point3D<float> Position { get; set; }
+        Point3D<Single> Position { get; set; }
         Point3D<int> BlockSize { get; }
         Point3D<int> BlockPosition { get; }
         Orientation UnitOrientation { get; set; }
