@@ -94,11 +94,11 @@ namespace Units2D
     public class ActionMoveUnit2D : AAction
     {
         public override string Name { get => "Move"; }
-        public Point2D<int> DestanationPoint { get; protected set; }
-        public double SpeedPerSecond { get; protected set; }
+        public FloatPoint2D DestanationPoint { get; protected set; }
+        public float SpeedPerSecond { get; protected set; }
         public IUnit2D MovingUnit { get; protected set; }
         protected DateTime LastStepTime = default;
-        public ActionMoveUnit2D(IUnit2D unit2D, Point2D<int> destanationPoint, double speedPerSecond,  IActions nextAction)
+        public ActionMoveUnit2D(IUnit2D unit2D, FloatPoint2D destanationPoint, float speedPerSecond,  IActions nextAction)
         {
             MovingUnit = unit2D;
             DestanationPoint = destanationPoint;
@@ -109,9 +109,15 @@ namespace Units2D
         public override IActions Progress()
         {
             if (LastStepTime == default) LastStepTime = DateTime.Now;
-            double StepLength = (DateTime.Now.Subtract(LastStepTime).TotalMilliseconds / 1000.0) * SpeedPerSecond;
-            Single 
+            float StepLength = (float)(DateTime.Now.Subtract(LastStepTime).TotalMilliseconds / 1000.0) * SpeedPerSecond;
+            float sqrDistance = MovingUnit.Position.SquareDistanceF(DestanationPoint);
 
+            if (sqrDistance< MathF.Pow(StepLength,2))
+            {
+                MovingUnit.Position.X = DestanationPoint.X;
+                MovingUnit.Position.Y = DestanationPoint.Y;
+                return NextAction;
+            }
 
             MovingUnit.Position.MoveStepTo(DestanationPoint, StepLength) ? NextAction : this;
         }
