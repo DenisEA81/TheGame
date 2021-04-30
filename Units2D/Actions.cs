@@ -11,6 +11,7 @@ namespace Units2D
     public interface IActions
     {
         string Name { get; }
+        bool Complete();
         IActions Progress();
         IActions Start();
     }
@@ -20,6 +21,7 @@ namespace Units2D
         public abstract string Name { get; }
         protected IActions NextAction;
         public abstract IActions Progress();
+        public abstract bool Complete();
         public virtual IActions Start() => Progress();
     }
 
