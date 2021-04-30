@@ -99,6 +99,7 @@ namespace Units2D
         public float SpeedPerSecond { get; protected set; }
         
         public IUnit2D MovingUnit { get; protected set; }
+
         protected DateTime LastStepTime = default;
         public ActionMoveUnit2D(IUnit2D unit2D, FloatPoint2D destanationPoint, float speedPerSecond,  IActions nextAction)
         {
@@ -137,9 +138,12 @@ namespace Units2D
                 MovingUnit.Position.Y = DestanationPoint.Y;
                 return NextAction;
             }
+            FloatPoint2D vector = MovingVector();
 
-            MovingUnit.Position.X += 
-            MovingUnit.Position.MoveStepTo(DestanationPoint, StepLength) ? NextAction : this;
+            MovingUnit.Position.X += vector.X * StepLength;
+            MovingUnit.Position.Y += vector.Y * StepLength;
+
+            return this;
         }
     }
 }
