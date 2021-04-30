@@ -94,8 +94,10 @@ namespace Units2D
     public class ActionMoveUnit2D : AAction
     {
         public override string Name { get => "Move"; }
-        public FloatPoint2D DestanationPoint { get; protected set; }
+        public FloatPoint2D DestanationPoint { get; protected set; }        
+
         public float SpeedPerSecond { get; protected set; }
+        
         public IUnit2D MovingUnit { get; protected set; }
         protected DateTime LastStepTime = default;
         public ActionMoveUnit2D(IUnit2D unit2D, FloatPoint2D destanationPoint, float speedPerSecond,  IActions nextAction)
@@ -106,6 +108,23 @@ namespace Units2D
             NextAction = nextAction;
             LastStepTime = default;
         }
+
+        public override IActions Start()
+        {
+            LastStepTime = DateTime.Now;            
+            return base.Start();
+        }
+
+        public FloatPoint2D MovingVector()
+        {
+            FloatPoint2D delta = new FloatPoint2D(DestanationPoint.X - MovingUnit.Position.X, DestanationPoint.Y-MovingUnit.Position.Y);
+            float len = delta.VectorLength();
+            if (len < 0.0001) return new FloatPoint2D(0, 0);
+            if (Math.Abs(delta.X) < 0.0001) return new FloatPoint2D(0, 1);
+            if (Math.Abs(delta.Y) < 0.0001) return new FloatPoint2D(1, 0);
+            return new FloatPoint2D(delta.X/len,delta.Y/len);
+        }
+
         public override IActions Progress()
         {
             if (LastStepTime == default) LastStepTime = DateTime.Now;
@@ -119,6 +138,7 @@ namespace Units2D
                 return NextAction;
             }
 
+            MovingUnit.Position.X += 
             MovingUnit.Position.MoveStepTo(DestanationPoint, StepLength) ? NextAction : this;
         }
     }

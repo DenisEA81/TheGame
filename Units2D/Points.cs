@@ -38,17 +38,21 @@ namespace Units2D
         public float SquareDistanceF(Point2D target) => (MathF.Pow(X - target.X, 2) + MathF.Pow(Y - target.Y, 2));
         public double Distance(Point2D target) => Math.Sqrt(SquareDistance(target));
         public float DistanceF(Point2D target) => MathF.Sqrt(SquareDistanceF(target));
+        public long VectorSquareLength()=> (long)(MathF.Pow(X, 2) + MathF.Pow(Y, 2));
+        public int VectorLength() => (int)(MathF.Sqrt(MathF.Pow(X, 2) + MathF.Pow(Y, 2)));
         public Point ToPoint() => new Point(X, Y);
     }
 
     public class FloatPoint2D : Point2D<float>
     {
-        public FloatPoint2D(int x = 0, int y = 0) : base(x, y) { }
+        public FloatPoint2D(float x = 0, float y = 0) : base(x, y) { }
         public double SquareDistance(FloatPoint2D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2));
         public float SquareDistanceF(FloatPoint2D target) => (MathF.Pow(X - target.X, 2) + MathF.Pow(Y - target.Y, 2));
         public double Distance(FloatPoint2D target) => Math.Sqrt(SquareDistance(target));
         public float DistanceF(FloatPoint2D target) => MathF.Sqrt(SquareDistanceF(target));
         public Point ToPoint() => new Point((int)Math.Round(X), (int)Math.Round(Y));
+        public double VectorSquareLength() => Math.Pow(X, 2) + Math.Pow(Y, 2);
+        public float VectorLength() => (float)Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2));
         public PointF ToPointF() => new PointF(X,Y);
     }
 
@@ -58,6 +62,8 @@ namespace Units2D
         public double SquareDistance(DoublePoint2D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2));
         public double Distance(DoublePoint2D target) => Math.Sqrt(SquareDistance(target));
         public Point ToPoint() => new Point((int)Math.Round(X), (int)Math.Round(Y));
+        public double VectorSquareLength() => Math.Pow(X, 2) + Math.Pow(Y, 2);
+        public double VectorLength() => Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2));
         public PointF ToPointF() => new PointF((float)X, (float)Y);
     }
 
@@ -66,6 +72,8 @@ namespace Units2D
         public Point3D(int x = 0, int y = 0, int z = 0) : base(x, y, z) { }
         public double SquareDistance(Point3D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2) + Math.Pow(Z - target.Z, 2));
         public float SquareDistanceF(Point3D target) => (MathF.Pow(X - target.X, 2) + MathF.Pow(Y - target.Y, 2) + MathF.Pow(Z - target.Z, 2));
+        public long VectorSquareLength() => (long)(MathF.Pow(X, 2) + MathF.Pow(Y, 2) + MathF.Pow(Z, 2));
+        public int VectorLength() => (int)(MathF.Sqrt(MathF.Pow(X, 2) + MathF.Pow(Y, 2) + MathF.Pow(Z, 2)));
         public double Distance(Point3D target) => Math.Sqrt(SquareDistance(target));
     }
 
@@ -74,6 +82,8 @@ namespace Units2D
         public FloatPoint3D(int x = 0, int y = 0, int z = 0) : base(x, y, z) { }
         public double SquareDistance(FloatPoint3D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2) + Math.Pow(Z - target.Z, 2));
         public float SquareDistanceF(FloatPoint3D target) => (MathF.Pow(X - target.X, 2) + MathF.Pow(Y - target.Y, 2) + MathF.Pow(Z - target.Z, 2));
+        public double VectorSquareLength() => Math.Pow(X, 2) + Math.Pow(Y, 2) + Math.Pow(Z, 2);
+        public float VectorLength() => (float)Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2) + Math.Pow(Z, 2));
         public double Distance(FloatPoint3D target) => Math.Sqrt(SquareDistance(target));
         public float DistanceF(FloatPoint3D target) => MathF.Sqrt(SquareDistanceF(target));
     }
@@ -81,7 +91,9 @@ namespace Units2D
     public class DoublePoint3D : Point3D<double>
     {
         public DoublePoint3D(int x = 0, int y = 0, int z = 0) : base(x, y, z) { }
-        public double SquareDistance(DoublePoint3D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2) + Math.Pow(Z - target.Z, 2));        
+        public double SquareDistance(DoublePoint3D target) => (Math.Pow(X - target.X, 2) + Math.Pow(Y - target.Y, 2) + Math.Pow(Z - target.Z, 2));
+        public double VectorSquareLength() => Math.Pow(X, 2) + Math.Pow(Y, 2) + Math.Pow(Z, 2);
+        public double VectorLength() => Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2) + Math.Pow(Z, 2));
         public double Distance(DoublePoint3D target) => Math.Sqrt(SquareDistance(target));
     }
 
