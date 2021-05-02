@@ -60,9 +60,9 @@ namespace MapEditor
 
             #region Создание TestUnit
             TestUnit = new Unit2D("Villy",
-                    new Point3D<float>(375, 0, 0),
-                    new Point3D<int>(20, 20, 50),
-                    new Point3D<int>(0, 0, 0),
+                    new FloatPoint2D(375, 0),
+                    new Point3D(20, 20, 50),
+                    new Point3D(0, 0, 0),
                     new Orientation() { OrientationCount = 8 },
                     null);
             TestUnit.Actions = 
