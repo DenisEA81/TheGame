@@ -8,23 +8,28 @@ using Images;
 
 namespace Units2D
 {
+    #region Интерфейс IActions 
     public interface IActions
     {
         string Name { get; }
-        bool Complete();
+        bool IsComplete();
         IActions Progress();
         IActions Start();
     }
-    
+    #endregion
+
+    #region Абстрактный класс AActions
     public abstract class AAction : IActions
     {
         public abstract string Name { get; }
         protected IActions NextAction;
-        public abstract IActions Progress();
-        public abstract bool Complete();
+        public abstract bool IsComplete();
+        public virtual IActions Progress() => IsComplete() ? NextAction : this;
         public virtual IActions Start() => Progress();
     }
+    #endregion
 
+    #region ActionWaitForTime - действие по таймеру
     public class ActionWaitForTime : AAction
     {
         public override string Name { get => "WaitTimer"; }
@@ -33,11 +38,12 @@ namespace Units2D
         public ActionWaitForTime(IActions actionAfterTimer, int timerMilliseconds)
         {
             NextAction = actionAfterTimer;
-            DestanationTime = DateTime.Now.AddMilliseconds(timerMilliseconds);
             TimerMilliseconds = timerMilliseconds;
+            DestanationTime = DateTime.Now.AddMilliseconds(TimerMilliseconds);
         }
-        public override IActions Progress() =>
-            (DateTime.Now.Ticks <= DestanationTime.Ticks) ? NextAction : this;
+
+        public override bool IsComplete() => 
+            (DateTime.Now.Ticks <= DestanationTime.Ticks);
 
         public override IActions Start()
         {
@@ -45,7 +51,9 @@ namespace Units2D
             return base.Start();
         }
     }
+    #endregion
 
+    #region ActionInTimeSteps - действие с шагами, растягиваемыми таймером
     public class ActionInTimeSteps : AAction
     {
         public override string Name { get => "WaitTimerSteps"; }
@@ -59,9 +67,10 @@ namespace Units2D
             ThisAction = thisAction;
         }
 
+        public override bool IsComplete() => ThisAction == null;
         public override IActions Start()
         {
-            if ((ThisAction = ThisAction.Start())==null) return null;
+            ThisAction = ThisAction.Start();
             TimerStep = new ActionWaitForTime(null,MillisecondStepLength).Start();
             return base.Start();
         }
@@ -71,13 +80,16 @@ namespace Units2D
                 TimerStep = TimerStep.Progress();
             else
             {
-                if ((ThisAction = ThisAction.Progress())==null) return NextAction;
+                ThisAction = ThisAction.Progress();
+                if (IsComplete()) return NextAction;
                 TimerStep = new ActionWaitForTime(null, MillisecondStepLength).Start();
             }
             return this;
         }
     }
+    #endregion
 
+    #region ActionTurnUnit2D - поворот юнита
     public class ActionTurnUnit2D : AAction
     {
         public override string Name { get => "Turn"; }
@@ -89,10 +101,15 @@ namespace Units2D
             DestanationDegrees = destanationDegrees;
             TurningUnit = unit2D;
         }
-        public override IActions Progress() =>
-            TurningUnit.UnitOrientation.Turn(DestanationDegrees) ? NextAction : this;
-    }
 
+        public override bool IsComplete() => 
+            TurningUnit.UnitOrientation.Turn(DestanationDegrees);
+        public override IActions Progress() =>
+            IsComplete() ? NextAction : this;
+    }
+    #endregion
+
+    #region ActionMoveUnit2D - движение юнита
     public class ActionMoveUnit2D : AAction
     {
         public override string Name { get => "Move"; }
@@ -128,6 +145,9 @@ namespace Units2D
             return new FloatPoint2D(delta.X/len,delta.Y/len);
         }
 
+        public override bool IsComplete() => false;
+        
+
         public override IActions Progress()
         {
             if (LastStepTime == default) LastStepTime = DateTime.Now;
@@ -148,4 +168,5 @@ namespace Units2D
             return this;
         }
     }
+    #endregion
 }
