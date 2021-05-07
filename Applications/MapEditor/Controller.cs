@@ -32,7 +32,9 @@ namespace MapEditor
         protected GameTimer gameTimerAnimation = new GameTimer(60);
         protected GameTimer gameTimerVariant = new GameTimer(60);
 
-        public IUnit2D TestUnit=null;
+        public List<IUnit2D> TestUnit=null;
+
+        private bool FirstStep = true;
 
         public MapEditorController(IDrawingSurface surface, string applicationPath)
         {
@@ -59,17 +61,42 @@ namespace MapEditor
             #endregion
 
             #region Создание TestUnit
-            TestUnit = new Unit2D("Villy",
-                    new FloatPoint2D(375, 0),
-                    new Point3D(20, 20, 50),
-                    new Point3D(0, 0, 0),
-                    new Orientation() { OrientationCount = 8 },
-                    null);
-            TestUnit.Actions = 
-                    new List<IActions>()
-                        {
-                            new ActionInTimeSteps(null, new ActionTurnUnit2D(TestUnit, 180, null), 500)
-                        };
+            TestUnit = new List<IUnit2D>() 
+                { new Unit2D("Villy",
+                        new FloatPoint2D(350, 50),
+                        new Point3D(20, 20, 50),
+                        new Point3D(0, 0, 0),
+                        new Orientation(64),
+                        null) 
+                };
+            
+            Dictionary<string, IUnit2DActions> ActionDic = new Dictionary<string, IUnit2DActions>();
+            ActionDic.Add("turn0", new ActionTurnUnit2D(null, 0, null));
+            ActionDic.Add("turn90", new ActionTurnUnit2D(null, 90, null));
+            ActionDic.Add("turn180", new ActionTurnUnit2D(null, 180, null));
+            ActionDic.Add("turn270", new ActionTurnUnit2D(null, 270, null));
+
+            for (int i = 0; i < TestUnit.Count; i++)
+            {
+                  
+                TestUnit[i].Actions =
+                        new List<IActions>()
+                            {
+                                new ActionWaitForTime(2000,
+                                new ActionInTimeSteps(ActionDic["turn180"].Copy(TestUnit[i]),5,
+                                new ActionWaitForTime(2000,
+                                new ActionInTimeSteps(ActionDic["turn0"].Copy(TestUnit[i]),50,
+                                new ActionWaitForTime(2000,
+                                new ActionInTimeSteps(ActionDic["turn90"].Copy(TestUnit[i]),20,
+                                new ActionWaitForTime(2000,
+                                new ActionInTimeSteps(ActionDic["turn0"].Copy(TestUnit[i]),1,
+                                new ActionInTimeSteps(ActionDic["turn270"].Copy(TestUnit[i]),0,
+                                new ActionInTimeSteps(ActionDic["turn180"].Copy(TestUnit[i]),0,
+                                new ActionWaitForTime(1000,
+                                new ActionInTimeSteps(ActionDic["turn0"].Copy(TestUnit[i]),10
+                                ))))))))))))
+                            };
+            }
             #endregion
 
             #region Загрузка текущей сцены
@@ -120,38 +147,48 @@ namespace MapEditor
             int deltaVariant = gameTimerVariant.NextStep();
 
             #region Выполнение всех Actions юнитов
-            /*
-            for ( int i=0; i< ((List<IActions>)TestUnit.Actions).Count; i++)
-                ((List<IActions>)TestUnit.Actions)[i] = ((List<IActions>)TestUnit.Actions)[i].Progress();
-            */
+            for (int j = 0; j < TestUnit.Count; j++)
+                for (int i = 0; i < ((List<IActions>)TestUnit[j].Actions).Count; i++)
+                {
+                    ((List<IActions>)TestUnit[j].Actions)[i] = FirstStep? ((List<IActions>)TestUnit[j].Actions)[i]?.Start():((List<IActions>)TestUnit[j].Actions)[i]?.Progress();
+                    if (((List<IActions>)TestUnit[j].Actions)[i] == null) 
+                        ((List<IActions>)TestUnit[j].Actions).RemoveAt(i--);
+                }
             #endregion
 
 
             #region Подготовка матрицы рендеринга
-            var CurrentPictures = new List<List<IPositionedBitmap>>() { new List<IPositionedBitmap>(), new List<IPositionedBitmap> ()/*, new List<IPositionedBitmap>()*/ };
+            var CurrentPictures = new List<List<IPositionedBitmap>>() { new List<IPositionedBitmap>(), new List<IPositionedBitmap> (), new List<IPositionedBitmap>() };
 
             for (int i = 0; i < FullScenePictureList[0].Count; i++)
                 //if
                 CurrentPictures[0].Add(FullScenePictureList[0][i]);
+            /*
             for (int i = 0; i < FullScenePictureList[1].Count; i++)
                 //if
                 CurrentPictures[1].Add(FullScenePictureList[1][i]);
-           
-            /*
-            for (int i = 0; i < FullScenePictureList[2].Count; i++)
-                CurrentPictures[2].Add(TestUnit.Actions);
             */
+            for (int i = 0; i < TestUnit.Count; i++)
+                CurrentPictures[2].Add(FullScenePictureList[1][0]);
 
-            CurrentPictures[1].Sort(new PositionedPhysicalBitmapComparer( PositionedPhysicalBitmapComparer.SortDirection.Asc));
-
-            for (int i = 0; i < CurrentPictures.Count; i++)
-                for (int j = 0; j < (CurrentPictures[i]?.Count??0); j++)
+            //CurrentPictures[1].Sort(new PositionedPhysicalBitmapComparer( PositionedPhysicalBitmapComparer.SortDirection.Asc));
+            /*
+                for (int j = 0; j < (CurrentPictures[0]?.Count??0); j++)
                 {
-                    ((IImageAnimation)CurrentPictures[i][j]).AnimateImage(deltaAnimation);
-                    ((IImageAnimation)CurrentPictures[i][j]).VariantRotate(-deltaVariant);
+                    ((IImageAnimation)CurrentPictures[0][j]).AnimateImage(deltaAnimation);
+                    ((IImageAnimation)CurrentPictures[0][j]).VariantRotate(-deltaVariant);
                 }
+            */
+            for (int i = 0; i < TestUnit.Count; i++)
+            {
+                ((IImageAnimation)CurrentPictures[2][i]).AnimateImage(deltaAnimation);
+                ((IImageAnimation)CurrentPictures[2][i]).VariantIndex = TestUnit[i].UnitOrientation.CurrentOrientation;
+                CurrentPictures[2][i].Position = TestUnit[i].Position.ToPoint(); 
+            }
             ((ImageMatrixRender)Render).ItemMatrix = CurrentPictures;
             #endregion
+
+            FirstStep = false;
         }
     }
 

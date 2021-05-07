@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Units2D
 {
+    public delegate void OnChangeDelegate<T>(T item, string args);
     public class Orientation
     {
+        public Orientation() { }
+        public Orientation(int orientationCount)
+        {
+            OrientationCount = orientationCount;
+        }
+
+        public event OnChangeDelegate<Orientation> OnChange;
         private float _CurrentDegrees = 0;
         public float CurrentDegrees 
         {
@@ -16,8 +24,9 @@ namespace Units2D
             {
                 _CurrentDegrees = value % 360;
                 if (_CurrentDegrees < 0) _CurrentDegrees += 360;
-                _CurrentOrientation = (int)(_CurrentDegrees/360 * _OrientationCount);
+                _CurrentOrientation = (int)MathF.Round(_CurrentDegrees/360 * _OrientationCount,0);
                 _CurrentDegrees = _DegreesStep * _CurrentOrientation;
+                OnChange?.Invoke(this, "CurrentDegrees");
             } 
         }
 
@@ -33,6 +42,7 @@ namespace Units2D
                 _DegreesStep = value;
                 _OrientationCount = (int)(360 / _DegreesStep);
                 _DegreesStep = 360 / _OrientationCount;
+                OnChange?.Invoke(this, "DegreesStep");
             }
         } 
 
@@ -47,7 +57,8 @@ namespace Units2D
                 _CurrentDegrees = 0;
                 _CurrentOrientation = 0;
                 _OrientationCount = value;
-                _DegreesStep = 360 / _OrientationCount;
+                _DegreesStep = (float)360 / _OrientationCount;
+                OnChange?.Invoke(this, "OrientationCount");
             }
         }
 
@@ -60,9 +71,9 @@ namespace Units2D
                 _CurrentOrientation = value % _OrientationCount;
                 if (_CurrentOrientation < 0) _CurrentOrientation += _OrientationCount;
                 _CurrentDegrees = DegreesStep * _CurrentOrientation;
+                OnChange?.Invoke(this, "CurrentOrientation");
             }
         }
-
         public bool Inc(int DestanationOrientation)=>DestanationOrientation == (++CurrentOrientation);
         public bool Dec(int DestanationOrientation) =>DestanationOrientation == (--CurrentOrientation);
 

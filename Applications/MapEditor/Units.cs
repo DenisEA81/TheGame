@@ -12,6 +12,8 @@ namespace MapEditor
 {
     public interface IImageAnimation
     {
+        int ImageIndex { get; set; }
+        int VariantIndex { get; set; }
         void AnimateImage(int delta = 1);
         void VariantRotate(int delta = 1);
     }

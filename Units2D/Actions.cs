@@ -8,13 +8,18 @@ using Images;
 
 namespace Units2D
 {
-    #region Интерфейс IActions 
+    #region Интерфейсы IActions 
     public interface IActions
     {
         string Name { get; }
         bool IsComplete();
         IActions Progress();
         IActions Start();
+    }
+
+    public interface IUnit2DActions:IActions
+    {
+        IUnit2DActions Copy(IUnit2D unit2D = null, IActions nextAction = null);
     }
     #endregion
 
@@ -24,7 +29,7 @@ namespace Units2D
         public abstract string Name { get; }
         protected IActions NextAction;
         public abstract bool IsComplete();
-        public virtual IActions Progress() => IsComplete() ? NextAction : this;
+        public virtual IActions Progress() => IsComplete() ? NextAction?.Start() : this;
         public virtual IActions Start() => Progress();
     }
     #endregion
@@ -35,7 +40,7 @@ namespace Units2D
         public override string Name { get => "WaitTimer"; }
         public DateTime DestanationTime { get; protected set; }
         public int TimerMilliseconds { get; protected set; }
-        public ActionWaitForTime(IActions actionAfterTimer, int timerMilliseconds)
+        public ActionWaitForTime(int timerMilliseconds,IActions actionAfterTimer = null)
         {
             NextAction = actionAfterTimer;
             TimerMilliseconds = timerMilliseconds;
@@ -43,7 +48,7 @@ namespace Units2D
         }
 
         public override bool IsComplete() => 
-            (DateTime.Now.Ticks <= DestanationTime.Ticks);
+            (DateTime.Now.Ticks >= DestanationTime.Ticks);
 
         public override IActions Start()
         {
@@ -60,7 +65,7 @@ namespace Units2D
         public int MillisecondStepLength { get; protected set; }
         protected IActions TimerStep = null; 
         public IActions ThisAction { get; protected set; }
-        public ActionInTimeSteps(IActions nextAction, IActions thisAction, int millisecondStepLength)
+        public ActionInTimeSteps(IActions thisAction, int millisecondStepLength, IActions nextAction = null)
         {
             MillisecondStepLength = millisecondStepLength;
             NextAction = nextAction;
@@ -71,7 +76,7 @@ namespace Units2D
         public override IActions Start()
         {
             ThisAction = ThisAction.Start();
-            TimerStep = new ActionWaitForTime(null,MillisecondStepLength).Start();
+            TimerStep = new ActionWaitForTime(MillisecondStepLength).Start();
             return base.Start();
         }
         public override IActions Progress()
@@ -81,8 +86,8 @@ namespace Units2D
             else
             {
                 ThisAction = ThisAction.Progress();
-                if (IsComplete()) return NextAction;
-                TimerStep = new ActionWaitForTime(null, MillisecondStepLength).Start();
+                if (IsComplete()) return NextAction?.Start();
+                TimerStep = new ActionWaitForTime(MillisecondStepLength).Start();
             }
             return this;
         }
@@ -90,12 +95,12 @@ namespace Units2D
     #endregion
 
     #region ActionTurnUnit2D - поворот юнита
-    public class ActionTurnUnit2D : AAction
+    public class ActionTurnUnit2D : AAction, IUnit2DActions
     {
-        public override string Name { get => "Turn"; }
+        public override string Name { get => "TURN"; }
         public float DestanationDegrees { get; protected set; }
         public IUnit2D TurningUnit { get; protected set; }
-        public ActionTurnUnit2D(IUnit2D unit2D, float destanationDegrees, IActions nextAction)
+        public ActionTurnUnit2D(IUnit2D unit2D, float destanationDegrees, IActions nextAction = null)
         {
             NextAction = nextAction;
             DestanationDegrees = destanationDegrees;
@@ -105,14 +110,15 @@ namespace Units2D
         public override bool IsComplete() => 
             TurningUnit.UnitOrientation.Turn(DestanationDegrees);
         public override IActions Progress() =>
-            IsComplete() ? NextAction : this;
+            IsComplete() ? NextAction?.Start() : this;
+        public IUnit2DActions Copy(IUnit2D unit2D = null, IActions nextAction = null) => new ActionTurnUnit2D(unit2D??TurningUnit,DestanationDegrees,nextAction??NextAction);
     }
     #endregion
 
     #region ActionMoveUnit2D - движение юнита
-    public class ActionMoveUnit2D : AAction
+    public class ActionMoveUnit2D : AAction,IUnit2DActions
     {
-        public override string Name { get => "Move"; }
+        public override string Name { get => "MOVE"; }
         public FloatPoint2D DestanationPoint { get; protected set; }        
 
         public float SpeedPerSecond { get; protected set; }
@@ -120,7 +126,7 @@ namespace Units2D
         public IUnit2D MovingUnit { get; protected set; }
 
         protected DateTime LastStepTime = default;
-        public ActionMoveUnit2D(IUnit2D unit2D, FloatPoint2D destanationPoint, float speedPerSecond,  IActions nextAction)
+        public ActionMoveUnit2D(IUnit2D unit2D, FloatPoint2D destanationPoint, float speedPerSecond,  IActions nextAction = null)
         {
             MovingUnit = unit2D;
             DestanationPoint = destanationPoint;
@@ -128,6 +134,8 @@ namespace Units2D
             NextAction = nextAction;
             LastStepTime = default;
         }
+
+        public IUnit2DActions Copy(IUnit2D unit2D = null, IActions nextAction = null) => new ActionMoveUnit2D(unit2D??MovingUnit, DestanationPoint, SpeedPerSecond,nextAction??NextAction);
 
         public override IActions Start()
         {
@@ -158,7 +166,7 @@ namespace Units2D
             {
                 MovingUnit.Position.X = DestanationPoint.X;
                 MovingUnit.Position.Y = DestanationPoint.Y;
-                return NextAction;
+                return NextAction?.Start();
             }
             FloatPoint2D vector = MovingVector();
 
