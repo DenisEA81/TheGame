@@ -40,6 +40,7 @@ namespace MapEditor
         {
             AppPath = applicationPath;
             Render = new ImageMatrixRender(surface);
+            PressedKeys = new ButtonController(new List<ButtonKey>() { new ButtonKey(System.Windows.Forms.Keys.Escape) });
         }
 
         public override void Start()
@@ -141,8 +142,17 @@ namespace MapEditor
 
         public override void LogicStep()
         {
+            {
+                if (PressedKeys.GetValue(System.Windows.Forms.Keys.Escape))
+                {
+                    ApplicationState = ApplicationStateEnum.Stop;
+                    if (PressedKeys.GetValue(System.Windows.Forms.Keys.Escape))
+                if (PressedKeys.GetValue(System.Windows.Forms.Keys.Escape))
+                        PressedKeys.SetValue(System.Windows.Forms.Keys.Escape, false);
+                }
+            }
             if (ApplicationState != ApplicationStateEnum.Playing) return;
-            
+
             int deltaAnimation = gameTimerAnimation.NextStep();
             int deltaVariant = gameTimerVariant.NextStep();
 

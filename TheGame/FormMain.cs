@@ -59,6 +59,7 @@ namespace TheGame
                     }
                     e.SuppressKeyPress = true;
                 }
+                SetPressedKey(new ToolLibrary.ButtonKey(e.KeyCode), true);
             }
             catch (Exception er)
             {
@@ -87,5 +88,27 @@ namespace TheGame
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.PanelScreen.BorderStyle = BorderStyle.Fixed3D;
         }
+
+        private void FormMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            SetPressedKey(new ToolLibrary.ButtonKey(e.Button),true);
+        }
+
+        private void FormMain_KeyUp(object sender, KeyEventArgs e)
+        {
+            SetPressedKey(new ToolLibrary.ButtonKey(e.KeyCode), false);
+        }
+
+        private void FormMain_MouseUp(object sender, MouseEventArgs e)
+        {
+            SetPressedKey(new ToolLibrary.ButtonKey(e.Button), false);
+        }
+
+        private void SetPressedKey(ToolLibrary.ButtonKey bkey, bool value)
+        {
+            if (CurrentAppController.PressedKeys.Consist(bkey))
+                CurrentAppController.PressedKeys.SetValue(bkey,value);
+        }
+
     }
 }

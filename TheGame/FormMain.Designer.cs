@@ -72,6 +72,7 @@ namespace TheGame
             this.ClientSize = new System.Drawing.Size(504, 504);
             this.Controls.Add(this.PanelScreen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(520, 543);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -79,6 +80,9 @@ namespace TheGame
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseUp);
             this.PanelScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureScreen)).EndInit();
             this.ResumeLayout(false);

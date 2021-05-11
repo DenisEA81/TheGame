@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using Rendering;
 using ToolLibrary;
 
-
 namespace ApplicationController
 {
     public enum ApplicationStateEnum { Playing, Stop }
@@ -16,6 +15,7 @@ namespace ApplicationController
         string Name { get; }
         IRender Render { get; }
         ApplicationStateEnum ApplicationState { get; }
+        ButtonController PressedKeys { get; }
         Cursor GetAppCursor();
         void Start();
         void LogicStep();
@@ -30,6 +30,8 @@ namespace ApplicationController
         protected abstract string CursorFileName { get; }
         protected string AppPath { get=>_AppPath; set { _AppPath = (value.Trim().EndsWith("\\") ? value.Trim() : value.Trim() + "\\"); } }
         protected string _AppPath;
+
+        public ButtonController PressedKeys { get; protected set; }
         public IRender Render { get; protected set; }
         public ApplicationStateEnum ApplicationState { get; protected set; } = ApplicationStateEnum.Stop;
         public Cursor GetAppCursor() => 
