@@ -5,30 +5,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SFXMusic;
+using Images;
 
 namespace Units2D
 {
-    public interface IUnit2D
+    public interface IUnit2DTemplate:IImageInformation
     {
-        string Name { get; set; }
-        FloatPoint2D Position { get; set; }
-        Point3D BlockSize { get; }
-        Point3D BlockPosition { get; }
+        IList<IBitmapImageCollection> BitmapCollection { get; set; }
         Orientation UnitOrientation { get; set; }
         IEnumerable<IActions> Actions { get; set; }
     }
 
-    public class Unit2D : IUnit2D
+    public class Unit2DTemplate : IUnit2DTemplate
     {
-        public string Name { get; set; }
-        public FloatPoint2D Position { get; set; }
-        public Point3D BlockSize { get; protected set; }
-        public Point3D BlockPosition { get; protected set; }
+        public string ClassName { get; set; }
+        public string UnitName { get; set; }
+        public string Description { get; set; }
+        public Point PhysicalCenter { get; set; }
+        public Size BlockingSize { get; set; }
+        public IList<IImageAnimationInformation> Animations { get; set; }
+        public IList<IBitmapImageCollection> BitmapCollection { get; set; }
         public Orientation UnitOrientation { get; set; }
         public IEnumerable<IActions> Actions { get; set; }
-
-        public Unit2D(string name, FloatPoint2D position, Point3D blockSize, Point3D blockPosition, Orientation unitOrientation, IEnumerable<IActions> actions)
+        public Unit2DTemplate(XMLImageInformation xmlImage, Orientation unitOrientation, IEnumerable<IActions> actions)
         {
+            
             Name = name;
             Position = position;
             BlockSize = blockSize;

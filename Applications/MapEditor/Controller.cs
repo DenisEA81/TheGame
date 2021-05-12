@@ -48,7 +48,7 @@ namespace MapEditor
             #region Загрузка словаря Images
             XMLImageInformation[] ImageInfoList = XMLImageInformation.LoadFromXML($@"{AppPath}{ApplicationSubDirectory}Images\Images.xml");
             UnitTemplate = new Dictionary<string, Dictionary<string, IImageUnitTemplate>>();
-            IImageMatrixLoader ImageMatrixLoader = new FileImageMatrixLoader($@"{AppPath}{ApplicationSubDirectory}Images\");
+            IImageMatrixListLoader ImageMatrixLoader = new FileImageMatrixLoader($@"{AppPath}{ApplicationSubDirectory}Images\");
             for (int i = 0; i < ImageInfoList.Length; i++)
             {
                 IImageUnitTemplate temp = ImageUnitBuilder.Build(ImageInfoList[i], ImageMatrixLoader);
@@ -142,6 +142,7 @@ namespace MapEditor
 
         public override void LogicStep()
         {
+            #region Обработка нажатия клавишь и мыши
             {
                 if (PressedKeys.GetValue(System.Windows.Forms.Keys.Escape))
                 {
@@ -151,10 +152,16 @@ namespace MapEditor
                         PressedKeys.SetValue(System.Windows.Forms.Keys.Escape, false);
                 }
             }
-            if (ApplicationState != ApplicationStateEnum.Playing) return;
+            #endregion
 
+            #region Проверка общеигровых триггеров
+            if (ApplicationState != ApplicationStateEnum.Playing) return;
+            #endregion
+
+            #region Синхронизация времени
             int deltaAnimation = gameTimerAnimation.NextStep();
             int deltaVariant = gameTimerVariant.NextStep();
+            #endregion
 
             #region Выполнение всех Actions юнитов
             for (int j = 0; j < TestUnit.Count; j++)

@@ -1,11 +1,11 @@
-п»ї<?xml version="1.0"?>
+<?xml version="1.0"?>
+
 <ArrayOfXMLImageInformation>
   <XMLImageInformation>
-    <UnitName>Desert1</UnitName>
     <ClassName>Background</ClassName>
-    <Description>РџСѓСЃС‚С‹РЅСЏ С‚РёРї 1</Description>
-    <AnimationCount>1</AnimationCount>
-    <VariableCount>1</VariableCount>
+    <UnitName>Desert1</UnitName>
+    <Description>Пустыня тип 1</Description>
+    
     <PhysicalCenter>
       <X>0</X>
       <Y>0</Y>
@@ -14,13 +14,21 @@
       <Width>0</Width>
       <Height>0</Height>
     </BlockingSize>
+
+    <Animation>
+    <AnimationName>Default</AnimationName>
+    <AnimationCount>1</AnimationCount>
+    <VariableCount>1</VariableCount>
+    </Animation>
   </XMLImageInformation>
+
+
+
   <XMLImageInformation>
-    <UnitName>Villy_Move</UnitName>
     <ClassName>ImageUnit</ClassName>
-    <Description>Р’РёР»Р»Рё С€Р°РіР°РµС‚</Description>
-    <AnimationCount>8</AnimationCount>
-    <VariableCount>64</VariableCount>
+    <UnitName>Villy</UnitName>
+    <Description>Вилли</Description>
+
     <PhysicalCenter>
       <X>0</X>
       <Y>10</Y>
@@ -29,13 +37,26 @@
       <Width>32</Width>
       <Height>32</Height>
     </BlockingSize>
+        
+    <Animation>
+    <AnimationName>Move</AnimationName>
+    <AnimationCount>8</AnimationCount>
+    <VariableCount>64</VariableCount>
+    </Animation>
+
+    <Animation>
+    <AnimationName>Stopping</AnimationName>
+    <AnimationCount>1</AnimationCount>
+    <VariableCount>64</VariableCount>
+    </Animation>
   </XMLImageInformation>
+
+
   <XMLImageInformation>
-    <UnitName>Tree1</UnitName>
     <ClassName>ImageUnit</ClassName>
-    <Description>Р›РёСЃС‚РІРµРЅРЅРѕРµ РґРµСЂРµРІРѕ</Description>
-    <AnimationCount>16</AnimationCount>
-    <VariableCount>1</VariableCount>
+    <UnitName>Tree1</UnitName>
+    <Description>Лиственное дерево</Description>
+
     <PhysicalCenter>
       <X>0</X>
       <Y>185</Y>
@@ -44,5 +65,12 @@
       <Width>32</Width>
       <Height>32</Height>
     </BlockingSize>
+    
+    <Animation>
+    <AnimationName>Wobble</AnimationName>
+    <AnimationCount>16</AnimationCount>
+    <VariableCount>1</VariableCount>
+    </Animation>
   </XMLImageInformation>
+
 </ArrayOfXMLImageInformation>
