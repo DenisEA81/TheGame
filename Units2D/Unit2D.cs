@@ -11,11 +11,12 @@ namespace Units2D
 {
     public interface IUnit2DTemplate:IImageInformation
     {
-        IList<IBitmapImageCollection> BitmapCollection { get; set; }
+        //List<IBitmapImageCollection> BitmapCollection { get; set; }
         Orientation UnitOrientation { get; set; }
-        IEnumerable<IActions> Actions { get; set; }
+        Dictionary<string, IActions> Actions { get; set; }//допустимые действия
     }
 
+    
     public class Unit2DTemplate : IUnit2DTemplate
     {
         public string ClassName { get; set; }
@@ -23,19 +24,43 @@ namespace Units2D
         public string Description { get; set; }
         public Point PhysicalCenter { get; set; }
         public Size BlockingSize { get; set; }
-        public IList<IImageAnimationInformation> Animations { get; set; }
-        public IList<IBitmapImageCollection> BitmapCollection { get; set; }
+        public List<IImageAnimationInformation> Animations { get; set; }
         public Orientation UnitOrientation { get; set; }
-        public IEnumerable<IActions> Actions { get; set; }
-        public Unit2DTemplate(XMLImageInformation xmlImage, Orientation unitOrientation, IEnumerable<IActions> actions)
+        public Dictionary<string, IActions> Actions { get; set; }
+
+        public Unit2DTemplate(IImageInformation info, IImageMatrixListLoader loader)
         {
-            
-            Name = name;
-            Position = position;
-            BlockSize = blockSize;
-            BlockPosition = blockPosition;
-            UnitOrientation = unitOrientation;
-            Actions = actions;
+            ClassName = info.ClassName.Trim().ToUpper();
+            UnitName = info.UnitName.Trim().ToUpper();
+            Description = info.Description.Trim();
+            PhysicalCenter = info.PhysicalCenter;
+            BlockingSize = info.BlockingSize;
+
+            int animVCount = 0;
+            Animations = new List<IImageAnimationInformation>();
+            Dictionary<string, IBitmapImageCollection> tmp = loader.ReadBitmapCollection(info);
+            foreach (ImageAnimationInformation item in info.Animations)
+            {
+                Animations.Add((IImageAnimationInformation)tmp[item.AnimationName.Trim().ToUpper()]);
+                animVCount = item.VariableCount;
+            }
+            UnitOrientation = new Orientation(animVCount);
+            Actions = new Dictionary<string, IActions>();
         }
+    }
+    
+
+
+
+
+    public static class Unit2DTemplateBuilder
+    {
+        public static IUnit2DTemplate Build(IImageInformation info, IImageMatrixListLoader loader) =>
+            info.ClassName switch
+            {
+                //"Background" => new ImageUnitTemplateBackground(info, loader),
+                "ImageUnit" => new Unit2DTemplate(info, loader),
+                _ => throw new Exception($"Неизвестный класс <{info.ClassName}>"),
+            };
     }
 }
